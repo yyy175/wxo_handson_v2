@@ -1,0 +1,5 @@
+site_name: WXOHandson
+theme:
+  name: material
+docs_dir: source
+site_dir: docs
