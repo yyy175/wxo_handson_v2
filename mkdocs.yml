@@ -1,5 +1,23 @@
 site_name: WXOHandson
 theme:
+  palette:
+    scheme: default
+    accent: black
   name: material
+  features:
+    - tabs
+    - navigation.sections
+    - content.code.copy
 docs_dir: source
 site_dir: docs
+nav:
+- Agenda: agenda.md
+- Day2: day2.md
+
+
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
