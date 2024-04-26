@@ -1,6 +1,6 @@
 # Agenda
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+以下の2日間の日程で実施します。
 
 ## Day1(5/29)
 |time|session|

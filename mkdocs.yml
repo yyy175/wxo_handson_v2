@@ -1,5 +1,7 @@
 site_name: WXOHandson
 theme:
+  font:
+    text: IBM Plex Sans JP
   palette:
     scheme: default
     accent: black
@@ -12,7 +14,11 @@ docs_dir: source
 site_dir: docs
 nav:
 - Agenda: agenda.md
-- Day2: day2.md
+- Technical Lab1: lab1.md
+- Technical Lab2: lab2.md
+
+extra_css:
+  - stylesheets/extra.css
 
 
 markdown_extensions:
