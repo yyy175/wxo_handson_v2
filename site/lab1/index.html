@@ -280,7 +280,43 @@
         <li class="md-nav__item">
   <a href="#watsonx-orchestrate" class="md-nav__link">
     <span class="md-ellipsis">
-      watsonx Orchestrateの画面を見てみよう
+      watsonx Orchestrateの画面を確認してみよう
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      スキルの追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#personal-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      Personal Skillへのスキルの追加
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      スキルの動作確認
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      お疲れさまでした！
     </span>
   </a>
   
@@ -334,17 +370,234 @@
 <h2 id="_1">前提条件</h2>
 <ol>
 <li>watsonx Orchestrateの環境にアクセスできること。<br />
-<a href="https://dl.watson-orchestrate.ibm.com/">https://dl.watson-orchestrate.ibm.com/</a>  </li>
+<a href="https://dl.watson-orchestrate.ibm.com/">https://dl.watson-orchestrate.ibm.com/</a> 　　 </li>
 <li>IBM-idを用いてログイン可能であること。</li>
 </ol>
-<h2 id="watsonx-orchestrate">watsonx Orchestrateの画面を見てみよう</h2>
+<h2 id="watsonx-orchestrate">watsonx Orchestrateの画面を確認してみよう</h2>
 <p>このセクションでは、watsonx Orchestrateの主な画面構成について学びます。</p>
 <ol>
 <li>watsonx Orchestrateにログインします。</li>
 <li>IBM-idを入力して、<strong>Continue</strong> ボタンをクリックします。</li>
-<li>aaa
-<img alt="alt text" src="../lab1_images/image.png" /></li>
+<li>複数テナントに所属する場合には、テナント選択画面が表示されるので、適切なテナント名を選択してください。</li>
 </ol>
+<p><img alt="alt text" src="../lab1_images/image.png" /></p>
+<ol>
+<li>以下のような画面が表示されます。（ツアーのダイアログが表示された場合にはスキップしてください。）</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-5.png" /></p>
+<ol>
+<li>
+<p>詳細は以下の通りです。</p>
+<ol>
+<li>メニュー</li>
+<li>チャット画面</li>
+<li>スキル編集画面</li>
+<li>AI assistant builder</li>
+<li>Automation Builder</li>
+<li>ヘルプ</li>
+<li>タスク・リスト</li>
+<li>プロファイル/設定</li>
+</ol>
+</li>
+<li>
+<p>テナントIDを取得するには、右上のイニシャルが表示されているアイコンをクリックし、Aboutを選択します。</p>
+</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-6.png" /></p>
+<ol>
+<li>以下のようなダイアログが表示されます。crnからはじまる文字列がIDです。サポートに問い合わせる際にはこのIDを伝える必要があるため、覚えておきましょう。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-7.png" /></p>
+<h2 id="_2">スキルの追加</h2>
+<p>watsonx Orchestrateには、プリビルド・スキルと呼ばれる1000以上の様々なスキルが付属し、すぐに使用することが可能ですが、以下の方法でスキルを追加することも可能です。：</p>
+<ul>
+<li>Open APIの定義ファイル(json/yaml)をインポートする。</li>
+<li>既存スキル(ワークフローやRPA)のディスバリー</li>
+<li>スキルフローの作成</li>
+<li>Automation Builderによるスキルの実装</li>
+</ul>
+<p>このLabでは、OpenAPI定義をインポートしてスキルをカタログに追加する方法について学びます。では、始めましょう！</p>
+<ol>
+<li>
+<p>まず<a href="https://n28bf9mpmg.execute-api.us-west-2.amazonaws.com/default/hellowatonx">こちらのリンク</a>をクリックして、Hello world OpenAPIが利用可能であることを確認してください。 {"message":"Missing Authentication Token"}と表示されればOKです。このAPIはAWS上で動作するシンプルなAPIです。</p>
+</li>
+<li>
+<p><a href="../files/helloworld-watsonx.yaml">こちらのリンク</a>を右クリックしてファイルに保存してください。このファイルは先ほどのAPIの定義情報です。</p>
+</li>
+<li>
+<p>notepad, VSCode, vi/vimといったお好みのエディタでファイルを開き編集します。
+<div class="highlight"><pre><span></span><code>openapi: 3.0.3
+info:
+  title: YourInitials-helloworld-watsonx
+  description: Your Initials Hello world WatsonX
+  version: 1.0.0
+  x-ibm-annotations: true
+  x-ibm-application-name: IBM Watsonx - Training
+  x-ibm-application-id: watsonxai-YourInitials-training
+  x-ibm-skill-type: imported
+  x-ibm-application-icon: &lt;svg version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; 
+servers:
+  - url: https://n28bf9mpmg.execute-api.us-west-2.amazonaws.com/default
+security:
+  - passwordGrant: [ ]
+paths:
+  /hellowatsonx:
+    post:
+      summary: YourInitials Hello World WatsonX
+      operationId: Hello-YourInitials-watsonx
+</code></pre></div></p>
+</li>
+<li>
+<p>今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値にのYourIntialsの部分をあなたのイニシャルに置き換えてください。更新後のファイルは以下のようになるはずです。
+<div class="highlight"><pre><span></span><code>openapi: 3.0.3
+info:
+  title: SH-helloworld-watsonx
+  description: SH Hello world WatsonX
+  version: 1.0.0
+  x-ibm-annotations: true
+  x-ibm-application-name: IBM Watsonx - Training
+  x-ibm-application-id: watsonxai-SH-training
+  x-ibm-skill-type: imported
+  x-ibm-application-icon: &lt;svg version=&quot;1.1&quot; id=&quot;Layer_1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; 
+servers:
+  - url: https://n28bf9mpmg.execute-api.us-west-2.amazonaws.com/default
+security:
+  - passwordGrant: [ ]
+paths:
+  /hellowatsonx:
+    post:
+      summary: SH Hello World WatsonX
+      operationId: Hello-SH-watsonx
+</code></pre></div></p>
+</li>
+<li>
+<p>メニューからSkills and appsを選択します。</p>
+</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-8.png" /></p>
+<ol>
+<li>Add Skillsボタンをクリックします。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-9.png" /></p>
+<ol>
+<li>From a fileを選択してください。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-11.png" /></p>
+<ol>
+<li>先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。</li>
+<li>ファイルの検証が実施され、問題無ければ以下の様に表示されます。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-12.png" /></p>
+<ol>
+<li>
+<p>右下のNextをクリックしてください。追加するAPIの内容が表示されます。</p>
+</li>
+<li>
+<p>Hello World WatsonXのチェックボックスをチェックし、右下のAddボタンをクリックしてください。</p>
+</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-13.png" /></p>
+<ol>
+<li>スキル一覧にインポートしたスキルが表示されるので、右側のメニューを展開し、<strong>Enhance this skill</strong>を選択してください。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-14.png" /></p>
+<ol>
+<li>スキルの詳細が表示されます。スキルのEnhance画面から、スキルの入出力の表示、スキルを呼び出すためのフレーズ、watsonx Orchestrateが次に実行するスキルの提案を行うNext Best Skillsの設定などを行うことが可能です。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-15.png" /></p>
+<ol>
+<li><strong>Input</strong>タブをクリックしてください。Inputタブでは、スキルの入力について確認することができます。スキルの入力パラメータに<strong>name</strong>があり、必須のパラメータで無いことが分かります。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-16.png" /></p>
+<ol>
+<li>
+<p><strong>Output</strong>タブをクリックしてください。Outputタブでは、スキルの出力について確認することが可能です。スキルの出力パラメータとして<strong>greeting</strong>が定義されていることが分かります。
+<img alt="alt text" src="../lab1_images/image-18.png" /></p>
+</li>
+<li>
+<p><strong>Security</strong>タブをクリックしてください。Securityタブでは、認証情報や、URLを確認することができます。また、接続のテストを行うことができます。</p>
+</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-19.png" /></p>
+<ol>
+<li>
+<p>接続のテストを実行してみましょう。Usernameに test@acme.com、Passwordにtestを入力します。今回使用するAPIについては認証不要のため、どんな値を入力しても問題ありません。</p>
+</li>
+<li>
+<p>Submitボタンをクリックし、Authentication Successfulと表示されることを確認します。</p>
+</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-20.png" /></p>
+<ol>
+<li><strong>Phrases</strong>タブをクリックしてください。Phrasesタブでは、スキルを呼び出す際に使用するフレーズを登録します。ユーザーがここに登録した例文にマッチした文章をチャットから入力することでこのスキルが呼び出されます。複数のスキルがマッチした場合にはwatsonx Orchestrateは実行するスキルを確認してきます。いくつかの例文を追加してみてください。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-21.png" /></p>
+<ol>
+<li><strong>Next best skills</strong>タブをクリックしてください。このタブでは、スキルを実行した後に次に実行すべきスキルの選択肢として表示される複数のスキルを定義することが可能です。</li>
+<li>Next best skillsは10個まで登録することが可能です。</li>
+<li>
+<p>Next best skillsに追加した各スキルに対して明示的に変数のマッピングを行うことが可能です。
+<img alt="alt text" src="../lab1_images/image-23.png" /></p>
+</li>
+<li>
+<p><strong>Publish</strong>ボタンをクリックして、スキルをPublishしてください。
+<img alt="alt text" src="../lab1_images/image-24.png" /></p>
+</li>
+</ol>
+<h2 id="personal-skill">Personal Skillへのスキルの追加</h2>
+<p>ここまでの作業で、カタログにスキルを追加することができました。次のステップとしてPersonal Skillにカタログからスキルを追加します。
+1. 左上のメニューから<strong>Chat</strong>を選択してチャット画面を表示します。</p>
+<p><img alt="alt text" src="../lab1_images/image-25.png" /></p>
+<ol>
+<li>以下のような画面が表示されるはずです。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-26.png" /></p>
+<ol>
+<li>左下のAdd skills from the catalogをクリックします。検索フォームに先ほど作成したスキルの名前を入力してください。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-27.png" /></p>
+<ol>
+<li>スキルを選択して、add skillをクリックしてスキルを追加します。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-29.png" /></p>
+<ol>
+<li>
+<p>右上の<strong>Connect App</strong>をクリックしてアプリケーションと接続します。username,passwordに任意の値を入力し、Connect appボタンをクリックします。
+<img alt="alt text" src="../lab1_images/image-31.png" /></p>
+</li>
+<li>
+<p>アプリケーションとの接続が完了しました！</p>
+</li>
+<li>なお、接続はカタログからではなく、チャットからスキルを呼び出した際に実行することも可能です。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-32.png" /></p>
+<ol>
+<li>メニューからチャット画面に戻ります。スキルが追加されていることが分かります。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-33.png" /></p>
+<h2 id="_3">スキルの動作確認</h2>
+<p>カタログから追加したスキルは以下の2つの方法で実行可能です:
+- チャット画面下部に表示されているスキルをクリックする
+- スキルをEnhanceした際に指定したフレーズ(watsonx Orchestrateがしたいされたフレーズを元に学習するため、完全一致する必要はありません)を入力する</p>
+<ol>
+<li>チャットの入力欄に、<strong>Hello World WatsonX</strong>と入力してみてください。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-34.png" /></p>
+<ol>
+<li>先ほど追加したスキルが呼び出され、入力フォームが表示されます。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-35.png" /></p>
+<ol>
+<li>自分の名前を入力し、<strong>Apply</strong>ボタンをクリックしてください。結果が表示されるはずです。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-36.png" /></p>
+<ol>
+<li>チャットの内容は右上のホウキアイコンをクリックすることで削除することが可能です。</li>
+</ol>
+<p><img alt="alt text" src="../lab1_images/image-37.png" /></p>
+<p><img alt="alt text" src="../lab1_images/image-38.png" /></p>
+<h2 id="_4">お疲れさまでした！</h2>
+<p>このハンズオンでは、watsonx Orchestrateにログインし、カスタムスキルを追加、EnhanceしてからPublishし、カタログに追加しました。そしてカタログからスキルを追加し、チャット画面から呼び出しました。　</p>
 
 
 
