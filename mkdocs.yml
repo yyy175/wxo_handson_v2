@@ -10,8 +10,7 @@ theme:
     - tabs
     - navigation.sections
     - content.code.copy
-docs_dir: source
-site_dir: docs
+    - toc.integrate
 nav:
 - Agenda: agenda.md
 - Technical Lab1: lab1.md
@@ -19,6 +18,9 @@ nav:
 
 extra_css:
   - stylesheets/extra.css
+
+extra:
+  generator: false
 
 
 markdown_extensions:

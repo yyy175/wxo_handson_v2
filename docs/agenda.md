@@ -6,6 +6,9 @@
 |time|session|
 |-------|----|
 |10:00-11:00|watsonx Orchestrate概要|
+|10:00-11:00|watsonx Orchestrate概要|
+|10:00-11:00|watsonx Orchestrate概要|
+|10:00-11:00|watsonx Orchestrate概要|
 
 
 ## Day2(5/30)
