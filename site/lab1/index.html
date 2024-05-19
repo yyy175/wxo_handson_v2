@@ -378,14 +378,14 @@
 <ol>
 <li>watsonx Orchestrateにログインします。</li>
 <li>IBM-idを入力して、<strong>Continue</strong> ボタンをクリックします。</li>
-<li>複数テナントに所属する場合には、テナント選択画面が表示されるので、適切なテナント名を選択してください。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image.png" /></p>
-<ol>
-<li>以下のような画面が表示されます。（ツアーのダイアログが表示された場合にはスキップしてください。）</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-5.png" /></p>
-<ol>
+<li>
+<p>複数テナントに所属する場合には、テナント選択画面が表示されるので、適切なテナント名を選択してください。<br />
+<img alt="alt text" src="../lab1_images/image.png" /></p>
+</li>
+<li>
+<p>以下のような画面が表示されます。（ツアーのダイアログが表示された場合にはスキップしてください。）<br />
+<img alt="alt text" src="../lab1_images/image-5.png" /></p>
+</li>
 <li>
 <p>詳細は以下の通りです。</p>
 <ol>
@@ -400,14 +400,14 @@
 </ol>
 </li>
 <li>
-<p>テナントIDを取得するには、右上のイニシャルが表示されているアイコンをクリックし、Aboutを選択します。</p>
+<p>テナントIDを取得するには、右上のイニシャルが表示されているアイコンをクリックし、Aboutを選択します。<br />
+<img alt="alt text" src="../lab1_images/image-6.png" /></p>
+</li>
+<li>
+<p>以下のようなダイアログが表示されます。crnからはじまる文字列がIDです。サポートに問い合わせる際にはこのIDを伝える必要があるため、覚えておきましょう。<br />
+<img alt="alt text" src="../lab1_images/image-7.png" /></p>
 </li>
 </ol>
-<p><img alt="alt text" src="../lab1_images/image-6.png" /></p>
-<ol>
-<li>以下のようなダイアログが表示されます。crnからはじまる文字列がIDです。サポートに問い合わせる際にはこのIDを伝える必要があるため、覚えておきましょう。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-7.png" /></p>
 <h2 id="_2">スキルの追加</h2>
 <p>watsonx Orchestrateには、プリビルド・スキルと呼ばれる1000以上の様々なスキルが付属し、すぐに使用することが可能ですが、以下の方法でスキルを追加することも可能です。：</p>
 <ul>
@@ -471,131 +471,133 @@ paths:
 </code></pre></div></p>
 </li>
 <li>
-<p>メニューからSkills and appsを選択します。</p>
+<p>メニューからSkills and appsを選択します。<br />
+<img alt="alt text" src="../lab1_images/image-8.png" /></p>
 </li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-8.png" /></p>
-<ol>
-<li>Add Skillsボタンをクリックします。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-9.png" /></p>
-<ol>
-<li>From a fileを選択してください。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-11.png" /></p>
-<ol>
-<li>先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。</li>
-<li>ファイルの検証が実施され、問題無ければ以下の様に表示されます。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-12.png" /></p>
-<ol>
+<li>
+<p>Add Skillsボタンをクリックします。<br />
+<img alt="alt text" src="../lab1_images/image-9.png" /></p>
+</li>
+<li>
+<p>From a fileを選択してください。<br />
+<img alt="alt text" src="../lab1_images/image-11.png" /></p>
+</li>
+<li>
+<p>先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。</p>
+</li>
+<li>
+<p>ファイルの検証が実施され、問題無ければ以下の様に表示されます。<br />
+<img alt="alt text" src="../lab1_images/image-12.png" /></p>
+</li>
 <li>
 <p>右下のNextをクリックしてください。追加するAPIの内容が表示されます。</p>
 </li>
 <li>
-<p>Hello World WatsonXのチェックボックスをチェックし、右下のAddボタンをクリックしてください。</p>
+<p>Hello World WatsonXのチェックボックスをチェックし、右下のAddボタンをクリックしてください。<br />
+<img alt="alt text" src="../lab1_images/image-13.png" /></p>
 </li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-13.png" /></p>
-<ol>
-<li>スキル一覧にインポートしたスキルが表示されるので、右側のメニューを展開し、<strong>Enhance this skill</strong>を選択してください。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-14.png" /></p>
-<ol>
-<li>スキルの詳細が表示されます。スキルのEnhance画面から、スキルの入出力の表示、スキルを呼び出すためのフレーズ、watsonx Orchestrateが次に実行するスキルの提案を行うNext Best Skillsの設定などを行うことが可能です。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-15.png" /></p>
-<ol>
-<li><strong>Input</strong>タブをクリックしてください。Inputタブでは、スキルの入力について確認することができます。スキルの入力パラメータに<strong>name</strong>があり、必須のパラメータで無いことが分かります。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-16.png" /></p>
-<ol>
 <li>
-<p><strong>Output</strong>タブをクリックしてください。Outputタブでは、スキルの出力について確認することが可能です。スキルの出力パラメータとして<strong>greeting</strong>が定義されていることが分かります。
+<p>スキル一覧にインポートしたスキルが表示されるので、右側のメニューを展開し、<strong>Enhance this skill</strong>を選択してください。<br />
+<img alt="alt text" src="../lab1_images/image-14.png" /></p>
+</li>
+<li>
+<p>スキルの詳細が表示されます。スキルのEnhance画面から、スキルの入出力の表示、スキルを呼び出すためのフレーズ、watsonx Orchestrateが次に実行するスキルの提案を行うNext Best Skillsの設定などを行うことが可能です。<br />
+<img alt="alt text" src="../lab1_images/image-15.png" /></p>
+</li>
+<li>
+<p><strong>Input</strong>タブをクリックしてください。Inputタブでは、スキルの入力について確認することができます。スキルの入力パラメータに<strong>name</strong>があり、必須のパラメータで無いことが分かります。<br />
+<img alt="alt text" src="../lab1_images/image-16.png" /></p>
+</li>
+<li>
+<p><strong>Output</strong>タブをクリックしてください。Outputタブでは、スキルの出力について確認することが可能です。スキルの出力パラメータとして<strong>greeting</strong>が定義されていることが分かります。<br />
 <img alt="alt text" src="../lab1_images/image-18.png" /></p>
 </li>
 <li>
-<p><strong>Security</strong>タブをクリックしてください。Securityタブでは、認証情報や、URLを確認することができます。また、接続のテストを行うことができます。</p>
+<p><strong>Security</strong>タブをクリックしてください。Securityタブでは、認証情報や、URLを確認することができます。また、接続のテストを行うことができます。<br />
+<img alt="alt text" src="../lab1_images/image-19.png" /></p>
 </li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-19.png" /></p>
-<ol>
 <li>
 <p>接続のテストを実行してみましょう。Usernameに test@acme.com、Passwordにtestを入力します。今回使用するAPIについては認証不要のため、どんな値を入力しても問題ありません。</p>
 </li>
 <li>
-<p>Submitボタンをクリックし、Authentication Successfulと表示されることを確認します。</p>
+<p>Submitボタンをクリックし、Authentication Successfulと表示されることを確認します。<br />
+<img alt="alt text" src="../lab1_images/image-20.png" /></p>
 </li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-20.png" /></p>
-<ol>
-<li><strong>Phrases</strong>タブをクリックしてください。Phrasesタブでは、スキルを呼び出す際に使用するフレーズを登録します。ユーザーがここに登録した例文にマッチした文章をチャットから入力することでこのスキルが呼び出されます。複数のスキルがマッチした場合にはwatsonx Orchestrateは実行するスキルを確認してきます。いくつかの例文を追加してみてください。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-21.png" /></p>
-<ol>
-<li><strong>Next best skills</strong>タブをクリックしてください。このタブでは、スキルを実行した後に次に実行すべきスキルの選択肢として表示される複数のスキルを定義することが可能です。</li>
+<li>
+<p><strong>Phrases</strong>タブをクリックしてください。Phrasesタブでは、スキルを呼び出す際に使用するフレーズを登録します。ユーザーがここに登録した例文にマッチした文章をチャットから入力することでこのスキルが呼び出されます。複数のスキルがマッチした場合にはwatsonx Orchestrateは実行するスキルを確認してきます。いくつかの例文を追加してみてください。<br />
+<img alt="alt text" src="../lab1_images/image-21.png" /></p>
+</li>
+<li>
+<p><strong>Next best skills</strong>タブをクリックしてください。このタブでは、スキルを実行した後に次に実行すべきスキルの選択肢として表示される複数のスキルを定義することが可能です。</p>
+</li>
 <li>Next best skillsは10個まで登録することが可能です。</li>
 <li>
-<p>Next best skillsに追加した各スキルに対して明示的に変数のマッピングを行うことが可能です。
+<p>Next best skillsに追加した各スキルに対して明示的に変数のマッピングを行うことが可能です。<br />
 <img alt="alt text" src="../lab1_images/image-23.png" /></p>
 </li>
 <li>
-<p><strong>Publish</strong>ボタンをクリックして、スキルをPublishしてください。
+<p><strong>Publish</strong>ボタンをクリックして、スキルをPublishしてください。<br />
 <img alt="alt text" src="../lab1_images/image-24.png" /></p>
 </li>
 </ol>
 <h2 id="personal-skill">Personal Skillへのスキルの追加</h2>
-<p>ここまでの作業で、カタログにスキルを追加することができました。次のステップとしてPersonal Skillにカタログからスキルを追加します。
-1. 左上のメニューから<strong>Chat</strong>を選択してチャット画面を表示します。</p>
-<p><img alt="alt text" src="../lab1_images/image-25.png" /></p>
-<ol>
-<li>以下のような画面が表示されるはずです。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-26.png" /></p>
-<ol>
-<li>左下のAdd skills from the catalogをクリックします。検索フォームに先ほど作成したスキルの名前を入力してください。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-27.png" /></p>
-<ol>
-<li>スキルを選択して、add skillをクリックしてスキルを追加します。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-29.png" /></p>
+<p>ここまでの作業で、カタログにスキルを追加することができました。次のステップとしてPersonal Skillにカタログからスキルを追加します。</p>
 <ol>
 <li>
-<p>右上の<strong>Connect App</strong>をクリックしてアプリケーションと接続します。username,passwordに任意の値を入力し、Connect appボタンをクリックします。
+<p>左上のメニューから<strong>Chat</strong>を選択してチャット画面を表示します。<br />
+<img alt="alt text" src="../lab1_images/image-25.png" /></p>
+</li>
+<li>
+<p>以下のような画面が表示されるはずです。<br />
+<img alt="alt text" src="../lab1_images/image-26.png" /></p>
+</li>
+<li>
+<p>左下のAdd skills from the catalogをクリックします。検索フォームに先ほど作成したスキルの名前を入力してください。<br />
+<img alt="alt text" src="../lab1_images/image-27.png" /></p>
+</li>
+<li>
+<p>スキルを選択して、add skillをクリックしてスキルを追加します。<br />
+<img alt="alt text" src="../lab1_images/image-29.png" /></p>
+</li>
+<li>
+<p>右上の<strong>Connect App</strong>をクリックしてアプリケーションと接続します。username,passwordに任意の値を入力し、Connect appボタンをクリックします。<br />
 <img alt="alt text" src="../lab1_images/image-31.png" /></p>
 </li>
 <li>
 <p>アプリケーションとの接続が完了しました！</p>
 </li>
-<li>なお、接続はカタログからではなく、チャットからスキルを呼び出した際に実行することも可能です。</li>
+<li>
+<p>なお、接続はカタログからではなく、チャットからスキルを呼び出した際に実行することも可能です。<br />
+<img alt="alt text" src="../lab1_images/image-32.png" /></p>
+</li>
+<li>
+<p>メニューからチャット画面に戻ります。スキルが追加されていることが分かります。<br />
+<img alt="alt text" src="../lab1_images/image-33.png" /></p>
+</li>
 </ol>
-<p><img alt="alt text" src="../lab1_images/image-32.png" /></p>
-<ol>
-<li>メニューからチャット画面に戻ります。スキルが追加されていることが分かります。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-33.png" /></p>
 <h2 id="_3">スキルの動作確認</h2>
 <p>カタログから追加したスキルは以下の2つの方法で実行可能です:
 - チャット画面下部に表示されているスキルをクリックする
 - スキルをEnhanceした際に指定したフレーズ(watsonx Orchestrateがしたいされたフレーズを元に学習するため、完全一致する必要はありません)を入力する</p>
 <ol>
-<li>チャットの入力欄に、<strong>Hello World WatsonX</strong>と入力してみてください。</li>
+<li>
+<p>チャットの入力欄に、<strong>Hello World WatsonX</strong>と入力してみてください。<br />
+<img alt="alt text" src="../lab1_images/image-34.png" /></p>
+</li>
+<li>
+<p>先ほど追加したスキルが呼び出され、入力フォームが表示されます。<br />
+<img alt="alt text" src="../lab1_images/image-35.png" /></p>
+</li>
+<li>
+<p>自分の名前を入力し、<strong>Apply</strong>ボタンをクリックしてください。結果が表示されるはずです。<br />
+<img alt="alt text" src="../lab1_images/image-36.png" /></p>
+</li>
+<li>
+<p>チャットの内容は右上のホウキアイコンをクリックすることで削除することが可能です。<br />
+<img alt="alt text" src="../lab1_images/image-37.png" /><br />
+<img alt="alt text" src="../lab1_images/image-38.png" /></p>
+</li>
 </ol>
-<p><img alt="alt text" src="../lab1_images/image-34.png" /></p>
-<ol>
-<li>先ほど追加したスキルが呼び出され、入力フォームが表示されます。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-35.png" /></p>
-<ol>
-<li>自分の名前を入力し、<strong>Apply</strong>ボタンをクリックしてください。結果が表示されるはずです。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-36.png" /></p>
-<ol>
-<li>チャットの内容は右上のホウキアイコンをクリックすることで削除することが可能です。</li>
-</ol>
-<p><img alt="alt text" src="../lab1_images/image-37.png" /></p>
-<p><img alt="alt text" src="../lab1_images/image-38.png" /></p>
 <h2 id="_4">お疲れさまでした！</h2>
 <p>このハンズオンでは、watsonx Orchestrateにログインし、カスタムスキルを追加、EnhanceしてからPublishし、カタログに追加しました。そしてカタログからスキルを追加し、チャット画面から呼び出しました。　</p>
 
