@@ -21,14 +21,14 @@
 
 5. 詳細は以下の通りです。
 
-    1.メニュー
-    2.チャット画面
-    3.スキル編集画面
-    4.AI assistant builder
-    5.Automation Builder
-    6.ヘルプ
-    7.タスク・リスト
-    8.プロファイル/設定
+    1.メニュー  
+    2.チャット画面  
+    3.スキル編集画面  
+    4.AI assistant builder  
+    5.Automation Builder  
+    6.ヘルプ  
+    7.タスク・リスト  
+    8.プロファイル/設定  
 
 6. テナントIDを取得するには、右上のイニシャルが表示されているアイコンをクリックし、Aboutを選択します。  
 ![alt text](lab1_images/image-6.png)
