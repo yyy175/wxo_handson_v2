@@ -8,9 +8,10 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
  1. watsonx Orchestrateの環境にアクセスできること。  
  [https://dl.watson-orchestrate.ibm.com/](https://dl.watson-orchestrate.ibm.com/) 　　 
  2. IBM-idを用いてログイン可能であること。
+ 3. Automationsを用いて自動化を作成する権限があること。(Builder権限)
 
 
-## watsonx Orchestrateの画面を確認してみよう
+## watsonx Orchestrateへのアクセス
 このセクションでは、watsonx Orchestrateの主な画面構成について学びます。
 
  1. watsonx Orchestrateにログインします。
@@ -18,27 +19,30 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
  3. 複数テナントに所属する場合には、テナント選択画面が表示されるので、適切なテナント名を選択してください。  
 ![alt text](lab1_images/image.png)
 
-4. 以下のような画面が表示されます。（ツアーのダイアログが表示された場合にはスキップしてください。）  
-![alt text](lab1_images/image-5.png)
+## Automationの作成
 
-5. 詳細は以下の通りです。
+1. Automationsをクリックします。もしくは、左上のメニューから**Automations**を選択してもOKです。  
+![alt text](lab3_images/image.png)
 
-    1.メニュー
-    2.チャット画面
-    3.スキル編集画面
-    4.AI assistant builder
-    5.Automation Builder
-    6.ヘルプ
-    7.タスク・リスト
-    8.プロファイル/設定
+5. 右上の**Create automations**をクリックします。
+![alt text](lab3_images/image-1.png)
 
-6. テナントIDを取得するには、右上のイニシャルが表示されているアイコンをクリックし、Aboutを選択します。  
-![alt text](lab1_images/image-6.png)
+6. Automationの作成ダイアログが表示されるので、**あなたのイニシャル_Lending_Services**という名前を入力し、**Create**をクリックしてください。
+![alt text](lab3_images/image-2.png)
 
-7. 以下のようなダイアログが表示されます。crnからはじまる文字列がIDです。サポートに問い合わせる際にはこのIDを伝える必要があるため、覚えておきましょう。  
-![alt text](lab1_images/image-7.png)
+7. 以下のようなダイアログが表示されます。意思決定、ワークフロー、生成AIに関する処理を実装することが可能です。今回は意思決定に関するスキルを実装するため、**Decision**をクリックします。    
+![alt text](lab3_images/image-3.png)
 
-## スキルの追加
+8. 次にDecisionのモデルを選択します。3つのモデルを選択可能ですが、今回はDecision Modelを作成します。Decision ModelはDMN(Decision Model Notation)と呼ばれる標準の形式で意思決定をモデル化することが可能です。  
+![alt text](lab3_images/image-4.png)
+
+9. Decisionの名前を指定します。**あなたのイニシャル Personal Loan**という名前を指定して、**Create**ボタンをクリックしてください。
+![alt text](lab3_images/image-5.png)
+
+10. 次のようなDMN形式のダイアグラムが表示されます。緑のノード(Inputノード)はルールによって使用される、データを表現します。青いノード(意思決定ノード)は意思決定のステップを表現します。意思決定ノードにはそのステップで実行されるルールが含まれます。それぞれの意思決定ノードは部分的な意思決定の結果を出力します。複雑な意思決定には多くの意思決定ノードが含まれ、一つの意思決定ノードの出力が他の意思決定ノードの入力フローとして動作します。  
+![alt text](lab3_images/image-6.png)
+
+## Input ノードの実装
 watsonx Orchestrateには、プリビルド・スキルと呼ばれる1000以上の様々なスキルが付属し、すぐに使用することが可能ですが、以下の方法でスキルを追加することも可能です。：
 
 - Open APIの定義ファイル(json/yaml)をインポートする。
