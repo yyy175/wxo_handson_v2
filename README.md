@@ -9,6 +9,7 @@ watsonx Orchestrateのハンズオンのためのリポジトリです。
 ## 環境構築
 
 ### Gitのインストール
+お使いの環境に応じたGitをのインストールが必要です。
 
 ### MkDocsのインストール
  1. [こちら](https://www.mkdocs.org/user-guide/installation/)を参照してMkDocsをインストールします。Pythonのインストール後、以下のコマンドでインストール可能です。  
@@ -40,5 +41,15 @@ mkdocs build
 mkdocs gh-deploy
 ```
 
+## Markdownファイルの編集について
+ファイルの編集にはVisualCode Studioの利用が便利です。Ctrl+Shift+vでプレビューを表示したり、画像をコピー＆ペーストで貼り付けることも可能です。  
+画像を貼り付けると、デフォルトではファイルと同一のフォルダに画像ファイルが生成され、管理が難しくなるため、*Markdownのファイル名_images*フォルダへの格納を行います。  
+Visula Code Studioの設定で指定することが可能です。ファイル＞ユーザー設定＞拡張機能＞Markdown　から　を探し、項目の追加ボタンをクリックし、以下の項目と値を追加してください。  
+ - 項目: *
+ - 値: \${documentDirName}/${documentBaseName}_images/
+
+![alt text](README_images/image.png)
+
 ## その他
  - 文字列の後に改行したい場合には文末にスペースを2つ入力してください。
+ - 特殊文字をエスケープする際にはバックスラッシュを使用してください。
