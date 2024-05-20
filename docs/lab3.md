@@ -36,73 +36,38 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 8. 次にDecisionのモデルを選択します。3つのモデルを選択可能ですが、今回はDecision Modelを作成します。Decision ModelはDMN(Decision Model Notation)と呼ばれる標準の形式で意思決定をモデル化することが可能です。  
 ![alt text](lab3_images/image-4.png)
 
-9. Decisionの名前を指定します。**あなたのイニシャル Personal Loan**という名前を指定して、**Create**ボタンをクリックしてください。
+9. Decisionの名前を指定します。**あなたのイニシャル Personal Loan**という名前を指定して、**Create**ボタンをクリックしてください。  
 ![alt text](lab3_images/image-5.png)
 
-10. 次のようなDMN形式のダイアグラムが表示されます。緑のノード(Inputノード)はルールによって使用される、データを表現します。青いノード(意思決定ノード)は意思決定のステップを表現します。意思決定ノードにはそのステップで実行されるルールが含まれます。それぞれの意思決定ノードは部分的な意思決定の結果を出力します。複雑な意思決定には多くの意思決定ノードが含まれ、一つの意思決定ノードの出力が他の意思決定ノードの入力フローとして動作します。  
+10. 次のようなDMN形式のダイアグラムが表示されます。緑のノード(Inputノード)はルールによって使用されるデータを表現します。  青いノード(意思決定ノード)は意思決定のステップを表現します。意思決定ノードにはそのステップで実行されるルールが含まれます。それぞれの意思決定ノードは部分的な意思決定の結果を出力します。複雑な意思決定には多くの意思決定ノードが含まれ、一つの意思決定ノードの出力が他の意思決定ノードの入力フローとして動作します。  
 ![alt text](lab3_images/image-6.png)
 
 ## Input ノードの実装
-watsonx Orchestrateには、プリビルド・スキルと呼ばれる1000以上の様々なスキルが付属し、すぐに使用することが可能ですが、以下の方法でスキルを追加することも可能です。：
+Inputノードの定義をしていきます。
 
-- Open APIの定義ファイル(json/yaml)をインポートする。
-- 既存スキル(ワークフローやRPA)のディスバリー
-- スキルフローの作成
-- Automation Builderによるスキルの実装
+1. Inputノードをクリックし、左側に表示される編集欄から、Node nameを**applicant name**に変更してください。  
+![alt text](lab3_images/image-7.png)
 
-このLabでは、OpenAPI定義をインポートしてスキルをカタログに追加する方法について学びます。では、始めましょう！
+2. パレットからAdd Input Nodeをクリックし、新規にInputノードを追加します。  
+![alt text](lab3_images/image-8.png)  
 
-1. まず[こちらのリンク](https://n28bf9mpmg.execute-api.us-west-2.amazonaws.com/default/hellowatonx)をクリックして、Hello world OpenAPIが利用可能であることを確認してください。 {"message":"Missing Authentication Token"}と表示されればOKです。このAPIはAWS上で動作するシンプルなAPIです。
+3. 追加されたノードをクリックし、右側の編集欄から、Node nameを**income**に、Output typeを**Integer**にしてください。
+![alt text](lab3_images/image-9.png)
 
-2. [こちらのリンク](./files/helloworld-watsonx.yaml)を右クリックしてファイルに保存してください。このファイルは先ほどのAPIの定義情報です。
+4. incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、**Connect to another node**をクリックし、decision nodeに接続してください。
+![alt text](lab3_images/image-10.png)  
 
-3. notepad, VSCode, vi/vimといったお好みのエディタでファイルを開き編集します。
-```
-openapi: 3.0.3
-info:
-  title: YourInitials-helloworld-watsonx
-  description: Your Initials Hello world WatsonX
-  version: 1.0.0
-  x-ibm-annotations: true
-  x-ibm-application-name: IBM Watsonx - Training
-  x-ibm-application-id: watsonxai-YourInitials-training
-  x-ibm-skill-type: imported
-  x-ibm-application-icon: <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
-servers:
-  - url: https://n28bf9mpmg.execute-api.us-west-2.amazonaws.com/default
-security:
-  - passwordGrant: [ ]
-paths:
-  /hellowatsonx:
-    post:
-      summary: YourInitials Hello World WatsonX
-      operationId: Hello-YourInitials-watsonx
-```
-4. 今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値にのYourIntialsの部分をあなたのイニシャルに置き換えてください。更新後のファイルは以下のようになるはずです。
-```
-openapi: 3.0.3
-info:
-  title: SH-helloworld-watsonx
-  description: SH Hello world WatsonX
-  version: 1.0.0
-  x-ibm-annotations: true
-  x-ibm-application-name: IBM Watsonx - Training
-  x-ibm-application-id: watsonxai-SH-training
-  x-ibm-skill-type: imported
-  x-ibm-application-icon: <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" 
-servers:
-  - url: https://n28bf9mpmg.execute-api.us-west-2.amazonaws.com/default
-security:
-  - passwordGrant: [ ]
-paths:
-  /hellowatsonx:
-    post:
-      summary: SH Hello World WatsonX
-      operationId: Hello-SH-watsonx
-```
+5. 1-4の手順を繰り返し、以下の表に従って新規ノードを追加してください。  
 
-5. メニューからSkills and appsを選択します。  
-![alt text](lab1_images/image-8.png)
+|Node name|Node type|
+|---------|---------|
+|income|integer|
+|employed|boolean|
+|SSN|string|
+|loan purpose|string|
+|credit score|integer|
+
+
 
 6. Add Skillsボタンをクリックします。  
 ![alt text](lab1_images/image-9.png)
