@@ -4,7 +4,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## IBM
 
-あいう
+![alt text](lab2_images/image.png)
 
 ## Commands
 
