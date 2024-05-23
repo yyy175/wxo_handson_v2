@@ -44,9 +44,9 @@ mkdocs gh-deploy
 ## Markdownファイルの編集について
 ファイルの編集にはVisualCode Studioの利用が便利です。Ctrl+Shift+vでプレビューを表示したり、画像をコピー＆ペーストで貼り付けることも可能です。  
 画像を貼り付けると、デフォルトではファイルと同一のフォルダに画像ファイルが生成され、管理が難しくなるため、*Markdownのファイル名_images*フォルダへの格納を行います。  
-Visula Code Studioの設定で指定することが可能です。ファイル＞ユーザー設定＞拡張機能＞Markdown　から　を探し、項目の追加ボタンをクリックし、以下の項目と値を追加してください。  
+Visula Code Studioの設定で指定することが可能です。ファイル＞ユーザー設定＞設定＞Markdown　から　を探し、項目の追加ボタンをクリックし、以下の項目と値を追加してください。  
  - 項目: *
- - 値: \${documentDirName}/${documentBaseName}_images/
+ - 値: `${documentDirName}/${documentBaseName}_images/`
 
 ![alt text](README_images/image.png)
 

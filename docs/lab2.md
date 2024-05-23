@@ -4,6 +4,8 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## IBM
 
+![alt text](lab2_images/image.png)
+
 ## Commands
 
 ## aaaaa
