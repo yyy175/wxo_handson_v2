@@ -54,90 +54,84 @@ Inputノードの定義をしていきます。
 3. 追加されたノードをクリックし、右側の編集欄から、Node nameを**income**に、Output typeを**Integer**にしてください。
 ![alt text](lab3_images/image-9.png)
 
-4. incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、**Connect to another node**をクリックし、decision nodeに接続してください。
+4. incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、**Connect to another node**をクリックし、decision nodeに接続してください。(もしくは、DecisionノードのメニューからAdd Inputを選択した場合には自動的に接続されます)  
 ![alt text](lab3_images/image-10.png)  
 
 5. 1-4の手順を繰り返し、以下の表に従って新規ノードを追加してください。  
 
 |Node name|Node type|
 |---------|---------|
-|income|integer|
 |employed|boolean|
 |SSN|string|
 |loan purpose|string|
 |credit score|integer|
 
+6. 意思決定ダイアグラムは以下の様になるはずです。  
+![alt text](lab3_images/image-11.png)  
 
 
-6. Add Skillsボタンをクリックします。  
-![alt text](lab1_images/image-9.png)
+## ルールの作成
+次に、意思決定ノードの中で実行されるルールをいくつか作成します。ルールは構文形式と意思決定表の形式で記述することが可能です。(日本語を用いることも可能ですが、現在のバージョンではサポートされていないため英語での記述になります。)
 
-7. From a fileを選択してください。  
-![alt text](lab1_images/image-11.png)
+1. 初めに作成するのは、デフォルト・ルールです。デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。その他のルールにはローンを却下する場合の条件を指定します。デフォルトのルールを作成するには、意思決定ノードを選択し、Loanタブをクリックしてから+ボタンをクリックし、Default ruleを選択します。  
+![alt text](lab3_images/image-12.png)
 
-8. 先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。
-9. ファイルの検証が実施され、問題無ければ以下の様に表示されます。  
-![alt text](lab1_images/image-12.png)
+2. 次のような意思決定エディタが表示されるので、string placeholder(\<a string\>と表示されている場所)をクリックしてドロップダウンからstringを選択し、**approved**と入力してください。
+![alt text](lab3_images/image-15.png)
 
-10. 右下のNextをクリックしてください。追加するAPIの内容が表示されます。
-11. Hello World WatsonXのチェックボックスをチェックし、右下のAddボタンをクリックしてください。  
-![alt text](lab1_images/image-13.png)
+3. ルールは以下の様になっているはずです。    
+![alt text](lab3_images/image-14.png)
 
-12. スキル一覧にインポートしたスキルが表示されるので、右側のメニューを展開し、**Enhance this skill**を選択してください。  
-![alt text](lab1_images/image-14.png)
+4. 次に、クレジット・スコアが600以下の申請者の申請はすべて却下するルールを追加します。+ をクリックして、Business Ruleを選択します。ルールの名前を**decline low credit score**として、criteria chocesでcredit scoreを選択してから**create**をクリックしてください。   
+![alt text](lab3_images/image-17.png)
 
-13. スキルの詳細が表示されます。スキルのEnhance画面から、スキルの入出力の表示、スキルを呼び出すためのフレーズ、watsonx Orchestrateが次に実行するスキルの提案を行うNext Best Skillsの設定などを行うことが可能です。  
-![alt text](lab1_images/image-15.png)
+5. ルールのテンプレートを以下の様に修正します。  
+![alt text](lab3_images/image-18.png)
 
-14. **Input**タブをクリックしてください。Inputタブでは、スキルの入力について確認することができます。スキルの入力パラメータに**name**があり、必須のパラメータで無いことが分かります。  
-![alt text](lab1_images/image-16.png)
+6. (オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。（デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。)   
+![alt text](lab3_images/image-19.png)
 
-15. **Output**タブをクリックしてください。Outputタブでは、スキルの出力について確認することが可能です。スキルの出力パラメータとして**greeting**が定義されていることが分かります。  
-![alt text](lab1_images/image-18.png)
+## 意思決定のテスト
+作成した意思決定はテスト・データを指定してテストすることができます。
 
-16. **Security**タブをクリックしてください。Securityタブでは、認証情報や、URLを確認することができます。また、接続のテストを行うことができます。  
-![alt text](lab1_images/image-19.png)
+ 1. 右上の**Preview**アイコンをクリックしてください。  
+ ![alt text](lab3_images/image-21.png)
 
-17. 接続のテストを実行してみましょう。Usernameに test@acme.com、Passwordにtestを入力します。今回使用するAPIについては認証不要のため、どんな値を入力しても問題ありません。
+ 2. **Add test data set**をクリックしてテスト・データを追加します。  
+ ![alt text](lab3_images/image-22.png)
 
-18. Submitボタンをクリックし、Authentication Successfulと表示されることを確認します。  
-![alt text](lab1_images/image-20.png)
+ 3. 左側に各項目の入力画面が表示されるので、＋をクリックして入力してから**pewview**ボタンをクリックして意思決定の出力を確認してください。例えば、creditScoreに500を入力して実行した場合、却下されるはずです。  
+![alt text](lab3_images/image-23.png)
 
-20. **Phrases**タブをクリックしてください。Phrasesタブでは、スキルを呼び出す際に使用するフレーズを登録します。ユーザーがここに登録した例文にマッチした文章をチャットから入力することでこのスキルが呼び出されます。複数のスキルがマッチした場合にはwatsonx Orchestrateは実行するスキルを確認してきます。いくつかの例文を追加してみてください。  
-![alt text](lab1_images/image-21.png)
+## 意思決定サービスのデプロイ
+正しく動作することが確認できたら、スキルとして呼び出せるようにサービスをデプロイします。  
 
-21. **Next best skills**タブをクリックしてください。このタブでは、スキルを実行した後に次に実行すべきスキルの選択肢として表示される複数のスキルを定義することが可能です。
-- Next best skillsは10個まで登録することが可能です。
-- Next best skillsに追加した各スキルに対して明示的に変数のマッピングを行うことが可能です。  
-![alt text](lab1_images/image-23.png)
+1. Back to "XX Personal Loan"をクリックしてください。  
+![alt text](lab3_images/image-24.png)
 
-22. **Publish**ボタンをクリックして、スキルをPublishしてください。  
-![alt text](lab1_images/image-24.png)
+2. **Operations**タブをクリックしてください。スキルとして呼び出されるオペレーションを定義します。  
+![alt text](lab3_images/image-25.png)
+
+3. **Create operation**ボタンをクリックしてください。  
+![alt text](lab3_images/image-26.png)
+
+4. オペレーションの設定画面が表示されるので、Operation nameを**XX Personal Loan**、source modelとして XX Personal Loanを選択してから**save**をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。  
+![alt text](lab3_images/image-27.png)
+
+5. 次にページ右上にある**Share changes**タブをクリックします。  
+![alt text](lab3_images/image-28.png)
+
+6. **Share**ボタンをクリックしてください。ダイアログが表示されるので**Share**をクリックします。この操作により、リポジトリに変更が反映されます。  
+![alt text](lab3_images/image-29.png)
+
+7. 
 
 
-## Personal Skillへのスキルの追加
-ここまでの作業で、カタログにスキルを追加することができました。次のステップとしてPersonal Skillにカタログからスキルを追加します。
 
-1. 左上のメニューから**Chat**を選択してチャット画面を表示します。  
-![alt text](lab1_images/image-25.png)
+Next, click on the Share changes tab at the top of the page, and click the Share button in the dialog.
 
-2. 以下のような画面が表示されるはずです。  
-![alt text](lab1_images/image-26.png)
 
-3. 左下のAdd skills from the catalogをクリックします。検索フォームに先ほど作成したスキルの名前を入力してください。  
-![alt text](lab1_images/image-27.png)
-
-4. スキルを選択して、add skillをクリックしてスキルを追加します。  
-![alt text](lab1_images/image-29.png)
-
-5. 右上の**Connect App**をクリックしてアプリケーションと接続します。username,passwordに任意の値を入力し、Connect appボタンをクリックします。  
-![alt text](lab1_images/image-31.png)
-
-6. アプリケーションとの接続が完了しました！
-- なお、接続はカタログからではなく、チャットからスキルを呼び出した際に実行することも可能です。  
-![alt text](lab1_images/image-32.png)
-
-7. メニューからチャット画面に戻ります。スキルが追加されていることが分かります。  
+1. メニューからチャット画面に戻ります。スキルが追加されていることが分かります。  
 ![alt text](lab1_images/image-33.png)
 
 ## スキルの動作確認
@@ -158,5 +152,11 @@ Inputノードの定義をしていきます。
 ![alt text](lab1_images/image-37.png)  
 ![alt text](lab1_images/image-38.png)
 
+
+## Option　意思決定表の作成
+
 ## お疲れさまでした！
 このハンズオンでは、watsonx Orchestrateにログインし、カスタムスキルを追加、EnhanceしてからPublishし、カタログに追加しました。そしてカタログからスキルを追加し、チャット画面から呼び出しました。　
+
+
+
