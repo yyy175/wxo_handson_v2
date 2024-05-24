@@ -12,7 +12,6 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 
 
 ## watsonx Orchestrateへのアクセス
-このセクションでは、watsonx Orchestrateの主な画面構成について学びます。
 
  1. watsonx Orchestrateにログインします。
  2. IBM-idを入力して、**Continue** ボタンをクリックします。
@@ -20,6 +19,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 ![alt text](lab1_images/image.png)
 
 ## Automationの作成
+このセクションでは、Automationを作成します。
 
 1. Automationsをクリックします。もしくは、左上のメニューから**Automations**を選択してもOKです。  
 ![alt text](lab3_images/image.png)
@@ -43,7 +43,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 ![alt text](lab3_images/image-6.png)
 
 ## Input ノードの実装
-Inputノードの定義をしていきます。
+このセクションでは、Inputノードの定義をしていきます。
 
 1. Inputノードをクリックし、左側に表示される編集欄から、Node nameを**applicant name**に変更してください。  
 ![alt text](lab3_images/image-7.png)

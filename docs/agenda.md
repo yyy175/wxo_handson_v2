@@ -13,4 +13,4 @@
 ## Day2(5/30)
 |time|session|
 |-------|----|
-|10:00-11:00|watsonx Orchestrate概要|
+|13:00-14:30|Automation Builderによる意思決定サービスの作成|
