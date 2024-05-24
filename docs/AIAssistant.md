@@ -1,4 +1,4 @@
-# AIAssistant Builder
+# AI Assistant Builder
 
 このLabでは、AI Assistant Builderを用いて、AI Assistantを構築します。生成AIを用いて回答するアクションや、これまでのハンズオンで作成したスキルを呼び出すアクションを定義し、動作を確認します。
 
@@ -60,11 +60,11 @@ AI-Guilded Actionは特定のインテントにマッチした場合に、LLMに
 3. 作成可能な3つのactionが表示されます。**AI-Guilded action**を選択してください。  
 ![alt text](AIAssistant_images/image-12.png)
 
-4. 今回は日本語で動作するアクションを作成してみます。ダイアログが表示されるので、**休暇**と入力し、**Save**をクリックしてください。   
-![alt text](AIAssistant_images/image-13.png)
+4. 今回は日本語で動作するアクションを作成してみます。ダイアログが表示されるので、**休暇の申請**と入力し、**Save**をクリックしてください。   
+![alt text](AIAssistant_images/image-27.png)
 
-5. Select modelから使用するLLMを選択することが可能です。今回は**llama3-8b-instruct**を選択してください。  
-![alt text](AIAssistant_images/image-14.png)  
+5. 左側のConfigurationをクリックすると設定画面が表示されます。Select modelから使用するLLMを選択することが可能です。今回は**llama3-8b-instruct**を選択してください。  
+![alt text](AIAssistant_images/image-28.png)
 
 6. Add knowledgeの欄に以下のテキストをコピー＆ペーストしてください。ここにLLMが動作する際に使用する知識を記入することで、知識に基づいた回答を生成することが可能です。  
 ```
@@ -113,6 +113,6 @@ Skill based actionを用いることで、AI-Assistantからスキルを呼び�
 ![alt text](AIAssistant_images/image-26.png)
 
 ## お疲れさまでした！
-AI-Assistant Builderを用いてAIアシスタントを実装しました。AI Assistant Builderを用いることで、AI Assistantを迅速に実装することが可能です。また、作成したAI AssitantはWebサイトに埋め込んだり、Slackなどと連携することも可能です。　
+AI Assistant Builderを用いてAIアシスタントを実装しました。AI Assistant Builderを用いることで、AI Assistantを迅速に実装することが可能です。また、作成したAI AssitantはWebサイトに埋め込んだり、Slackなどと連携することも可能です。　
 
 
