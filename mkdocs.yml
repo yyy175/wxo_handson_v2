@@ -27,6 +27,9 @@ nav:
 - Technical Lab1: lab1.md
 - Technical Lab2: lab2.md
 - Technical Lab3: lab3.md
+- OpenAPI Builder: OpenAPI.md
+- GenAI: GenAI.md
+- AI Assistant: AIAssistant.md
 
 extra_css:
   - stylesheets/extra.css

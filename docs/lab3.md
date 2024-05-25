@@ -12,7 +12,6 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 
 
 ## watsonx Orchestrateへのアクセス
-このセクションでは、watsonx Orchestrateの主な画面構成について学びます。
 
  1. watsonx Orchestrateにログインします。
  2. IBM-idを入力して、**Continue** ボタンをクリックします。
@@ -20,6 +19,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 ![alt text](lab1_images/image.png)
 
 ## Automationの作成
+このセクションでは、Automationを作成します。
 
 1. Automationsをクリックします。もしくは、左上のメニューから**Automations**を選択してもOKです。  
 ![alt text](lab3_images/image.png)
@@ -43,7 +43,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 ![alt text](lab3_images/image-6.png)
 
 ## Input ノードの実装
-Inputノードの定義をしていきます。
+このセクションでは、Inputノードの定義をしていきます。
 
 1. Inputノードをクリックし、左側に表示される編集欄から、Node nameを**applicant name**に変更してください。  
 ![alt text](lab3_images/image-7.png)
@@ -124,39 +124,107 @@ Inputノードの定義をしていきます。
 6. **Share**ボタンをクリックしてください。ダイアログが表示されるので**Share**をクリックします。この操作により、リポジトリに変更が反映されます。  
 ![alt text](lab3_images/image-29.png)
 
-7. 
+7. 左上の←をクリックしてLending Serviceのレベルに戻り、**History**タブをクリックしてください。  
+![alt text](lab3_images/image-30.png)
+
+8. 右側の+アイコンをクリックし、バージョンを作成します。  
+![alt text](lab3_images/image-31.png)
+
+9. バージョンの名前としてnameの欄に**1.0.0**と入力し、**Create**をクリックしてください。   　　
+![alt text](lab3_images/image-32.png)
+
+10. バージョンが作成されたら、**Publish**タブをクリックし、作成されたバージョンを展開し、**Publish**をクリックしてください。ダイアログが表示されるので**Publish**をクリックします。  
+![alt text](lab3_images/image-33.png)
+
+11. 意思決定サービスがパブリッシュされ、実行可能になりました。このサービスに紐づいたスキルがOrchestrate上に作成されます。左上のメニューから**Skills and apps**を選択してから、**Skills**タブをクリックし、スキルの一覧を表示させます。  
+![alt text](lab3_images/image-34.png)
+
+12. 作成した意思決定のスキルがReady to Publishの状態で表示されているはずです。
+![alt text](lab3_images/image-35.png)
+
+## スキルのエンハンス
+スキルのエンハンスを行い、各入力パラメータの表示形式や振る舞いを変更してみます。以下の様に変更します。変更はスキルのエンハンス画面から実施することが可能です、また、スキルが定義されているOpenAPI定義を直接変更することでより細かい変更が可能です。 
+
+|入力パラメータ|振る舞い|
+|-----|---|
+|income|必須|
+|loan purpose|選択肢|
+|credit score|説明を追加|
+|SSN|非表示|
+|employed|default value:true|
 
 
+1. スキルの右側のメニューを展開し、**Enhance this skill**を選択します。  
+![alt text](lab3_images/image-36.png)
 
-Next, click on the Share changes tab at the top of the page, and click the Share button in the dialog.
+2. **Input**タブをクリックし、incomeの**Required**にチェックを入れてください。  
+![alt text](lab3_images/image-37.png)
 
+3. loanPurposeの**Options**を選択し、**medical emergency**,**consolidate debt**,**home improvement**の3つのOptionを設定してください。  
+![alt text](lab3_images/image-39.png)
 
-1. メニューからチャット画面に戻ります。スキルが追加されていることが分かります。  
-![alt text](lab1_images/image-33.png)
+4. creditScoreを選択し説明に**Provide the Experian credit score**を入力してください。  
+![alt text](lab3_images/image-40.png)
 
-## スキルの動作確認
-カタログから追加したスキルは以下の2つの方法で実行可能です:
-- チャット画面下部に表示されているスキルをクリックする
-- スキルをEnhanceした際に指定したフレーズ(watsonx Orchestrateがしたいされたフレーズを元に学習するため、完全一致する必要はありません)を入力する
+5. **Save as draft**をクリックして変更を保存します。  
+![alt text](lab3_images/image-41.png)
 
-1. チャットの入力欄に、**Hello World WatsonX**と入力してみてください。  
-![alt text](lab1_images/image-34.png)
+6. スキル一覧画面に戻り、**Export this skill**を選択し、スキルをエクスポートし、ローカルにjsonファイルを保存します。  
+![alt text](lab3_images/image-42.png)
 
-2. 先ほど追加したスキルが呼び出され、入力フォームが表示されます。  
-![alt text](lab1_images/image-35.png)
+7. メモ帳やエディタなどで保存したファイルを開きます。各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については[Understanding x-properties](https://www.ibm.com/docs/en/watson-orchestrate?topic=skills-understanding-x-properties)を参照してください。
 
-3. 自分の名前を入力し、**Apply**ボタンをクリックしてください。結果が表示されるはずです。  
-![alt text](lab1_images/image-36.png)
+8. **epmployed**は以下の様に設定されています。**,"default": "true"**となるようにファイルを編集してください。（カンマを含めることを忘れないでください）
 
-4. チャットの内容は右上のホウキアイコンをクリックすることで削除することが可能です。  
-![alt text](lab1_images/image-37.png)  
-![alt text](lab1_images/image-38.png)
+```
+    "employed": {
+                "type": "boolean",
+                "x-ibm-order": 3,
+                "x-ibm-multiline": "false",
+                "default": "true"
+                },
+```
 
+9. 同様にSSNの部分を修正し、以下の様に **,"x-ibm-show": "false"**を追加してください。
+```
+    "SSN": {
+            "type": "string",
+            "x-ibm-order": 4,
+            "x-ibm-multiline": "false",
+            "x-ibm-show": "false"
+            },
+```
 
-## Option　意思決定表の作成
+10. ファイルを保存します。
+
+11. Skills and appsの画面で**Add skills**をクリックします。  
+![alt text](lab3_images/image-43.png)
+
+12. **From a file**をクリックし、先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。  
+![alt text](lab3_images/image-44.png)
+
+13. ファイルの検証が正しく行われたことを確認し**Next**をクリックします。エラーが表示された場合には、正しく編集されていることを確認してください。  
+![alt text](lab3_images/image-45.png)
+
+14. 既に存在するスキルをインポートするため、警告が表示されますが、スキルのチェックボックスにチェックをいれ、**Add**をクリックしてスキルを上書きします。  
+![alt text](lab3_images/image-46.png)
+
+15. スキルの右側のメニューから**Enhance this skill**をクリックしてからスキルを**Publish**してください。  
+![alt text](lab3_images/image-47.png)
+
+16. 左側のメニューから**Skill catalog**を選択します。  
+![alt text](lab3_images/image-48.png)
+
+17. **あなたのイニシャル_Lending_Service**検索欄に記入して検索し選択し、**Add**をクリックしてスキルを追加します。
+![alt text](lab3_images/image-49.png)  
+![alt text](lab3_images/image-50.png)
+
+18. 左側のメニューからChatを表示し、チャットの入力欄に、**あなたのイニシャルPersonalLoan**と入力してみてください。 スキルのフォームが表示され、先ほど行ったカスタマイズが正しく行われていることを確認します。 
+![alt text](lab3_images/image-52.png)
+
+19. 値を入力し、正しい結果が返ってくることを確認してください。
 
 ## お疲れさまでした！
-このハンズオンでは、watsonx Orchestrateにログインし、カスタムスキルを追加、EnhanceしてからPublishし、カタログに追加しました。そしてカタログからスキルを追加し、チャット画面から呼び出しました。　
-
+このハンズオンでは、Automation Builderを用いて意思決定サービスを実装し、スキルの入力フォームをカスタマイズしてから、チャット画面から呼び出しました。意思決定サービスを用いることで、AIが苦手な根拠のある正確な判断を実行することができます。　
 
 
