@@ -25,9 +25,10 @@ watsonx Orchestrateのハンズオンのためのリポジトリです。
  ```
 
 ### Material for MkDocsのインストール
-以下のコマンドでMaterial for MkDocsをインストールします。
+以下のコマンドでMaterial for MkDocsをインストールします。また、クリック時に画像を拡大するプラグインであるglightboxについてもインストールを行います。
 ```
 pip install mkdocs-material
+pip install mkdocs-glightbox
 ```
 
 ## ビルド

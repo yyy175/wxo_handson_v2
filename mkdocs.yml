@@ -1,4 +1,6 @@
 site_name: WXOHandson
+plugins:
+  - glightbox
 theme:
   font:
     text: IBM Plex Sans JP
