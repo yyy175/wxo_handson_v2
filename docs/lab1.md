@@ -33,7 +33,7 @@
     4.AI assistant builder  
     外部のWebサイトなどに組みこんだり、Slackなどのチャネルと統合可能なAIアシスタントの構成が可能です。  
 
-    5.Automations
+    5.Automations  
     意思決定、ワークフロー、生成AIに関する処理をローコードで実装し、スキルとして公開が可能です。  
 
     6.ヘルプ  
@@ -87,7 +87,7 @@ paths:
       summary: YourInitials Hello World WatsonX
       operationId: Hello-YourInitials-watsonx
 ```
-4. 今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値にのYourIntialsの部分をあなたのイニシャルに置き換えてください。更新後のファイルは以下のようになるはずです。
+4. 今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値にのYourIntialsの部分をあなたのイニシャルに置き換えてファイルを保存してください。更新後のファイルは以下のようになるはずです。
 ```
 openapi: 3.0.3
 info:
@@ -185,9 +185,9 @@ paths:
 ![alt text](lab1_images/image-33.png)
 
 ## スキルの動作確認
-カタログから追加したスキルは以下の2つの方法で実行可能です:
-- チャット画面下部に表示されているスキルをクリックする
-- スキルをEnhanceした際に指定したフレーズ(watsonx Orchestrateがしたいされたフレーズを元に学習するため、完全一致する必要はありません)を入力する
+カタログから追加したスキルは以下の2つの方法で実行可能です:  
+- チャット画面下部に表示されているスキルをクリックする  
+- スキルをEnhanceした際に指定したフレーズ(watsonx Orchestrateが指定されたフレーズを元に学習するため、完全一致する必要はありません)を入力する
 
 1. チャットの入力欄に、**Hello World WatsonX**と入力してみてください。  
 ![alt text](lab1_images/image-34.png)
