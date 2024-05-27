@@ -12,7 +12,7 @@
 このセクションでは、watsonx Orchestrate の主な画面構成について学びます。
 
  1. watsonx Orchestrate にログインします。
- 2. スキルを定義した OpenAPI ファイルをダウンロードします。リンクを**右クリック**して**名前を付けてリンクを保存**を選択すると、ご自身の PC に保存できます。または、ブラウザ上で json ファイルを開いても構いません。
+ 2. スキルを定義した [OpenAPI ファイル](./files/BAM_generate_content.json)をダウンロードします。リンクを**右クリック**して**名前を付けてリンクを保存**を選択すると、ご自身の PC に保存できます。または、ブラウザ上で json ファイルを開いても構いません。
  3. お好みのエディター (VSCode、vi/vim など) を用いてファイルを編集します。
  4. `YourName-generate content skill for wxO Handson` (8行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、`TaroYamada-generate content`)。同様に、`YourName-generate content` (26行目) も変更します。
  5. ファイルを保存します。

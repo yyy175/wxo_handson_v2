@@ -85,10 +85,10 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 4. 次に、クレジット・スコアが600以下の申請者の申請はすべて却下するルールを追加します。+ をクリックして、Business Ruleを選択します。ルールの名前を**decline low credit score**として、Select the criteria for your ruleでcredit scoreを選択してから**create**をクリックしてください。   
 ![alt text](lab3_images/image-17.png)
 
-5. ルールのテンプレートを以下の様に修正します。なお、ctrl+Spaceでコード補完が可能です。  
+5. ルールのテンプレートを以下の様に修正します。なお、Ctrl+Space(Macの場合はControl+Space)でコード補完が可能です。  
 ![alt text](lab3_images/image-18.png)
 
-6. (オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。（デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。)   
+6. (オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。(デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。)   
 ![alt text](lab3_images/image-19.png)
 
 ## 意思決定のテスト
