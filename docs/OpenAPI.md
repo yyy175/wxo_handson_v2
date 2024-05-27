@@ -1,5 +1,11 @@
 # OpenAPI builder
+watsonx Orchestrate でカスタムスキルを使う際には、OpenAPIの仕様書が必要です。ただ、時には仕様書がない場合もあります。その際に、仕様書を作成できるのが OpenAPI Builder です。
+
 このLabでは、OpenAPI builder を用いて Open API の仕様書（OAS）の作成、編集、生成を行う方法を練習します。
+
+## 前提条件
+ 1. watsonx Orchestrateの環境にアクセスできること。
+ 2. IBM-idを用いてログイン可能であること。
 
 ## 資料の Web ページから OpenAPI 仕様書を生成してみよう
  AIを使用して、資料の Web ページから OpenAPI の仕様書を生成できます。手順は以下のようになります。
@@ -89,3 +95,9 @@ OpenAPI builder から、OpenAPI 仕様書を JSON ファイルでローカル�
 
 ダウンロードするには、エディターの画面で **Download spec** をクリックします。
 ![alt text](OpenAPI_images/image-13.png)
+
+## お疲れさまでした！
+このLabでは、OpenAPI builder を用いて、OpenAPI の仕様書を作成、編集、生成する方法を確認しました。
+仕様書はWebページからAIで自動生成できるほか、既存ファイルの編集や、新規作成も可能です。
+作成時のビューは、Visual+AI view、JSON view、OpenAPI view の3つを使用でき、AIによる提案も活用できます。
+仕様書の作成後は、watsonx Orchestrate にインポートしてスキルとして利用できます。
