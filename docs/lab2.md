@@ -208,10 +208,10 @@ Outlook に接続してメールを送信できるようにするには資格情
  17. watsonx Orchestrate がスキルを認識できるように、スキルを呼び出すフレーズを登録してトレーニングする必要があります。  
  **Phrases** タブをクリックし、空の欄に **Generate content and send email to YourName** (**YourName** はご自身の名前に変更してください。例: TaroYamada) を入力し、Enter を押します。（**必ず Enter を押す必要があります**）  
  任意でさらにフレーズを追加し、**Publish** ボタンをクリックします。
- ![alt text](lab2_images/image-47.png)
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_184711_dl.watson-orchestrate.ibm.com.jpeg)
 
- 18. スキルフローを公開すると、スキルが正常に公開されたというメッセージが表示されます。★
- ![alt text](lab2_images/image-48.png)
+ 18. スキルフローを公開すると、スキルが正常に公開されたというメッセージが表示されます。  
+ ![alt text](lab2_images/image-78.png)  
 
  19. 以上でこのステップは完了です。
 
@@ -220,35 +220,33 @@ Outlook に接続してメールを送信できるようにするには資格情
 
  1. **Menu** -> **Skills Catalog** に移動します。
 
- 2. 先ほど作成したスキルフローはカタログから見られるようになります。自身のスキルセットに追加するため、**Add skill from the catalog** をクリックします。
+ 2. 先ほど作成したスキルフローが、スキルカタログから見られるようになります。検索欄にご自身の名前を入力します。
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_185344_dl.watson-orchestrate.ibm.com.jpeg)
 
- 3. 検索欄にご自身の名前を入力します。
- ![alt text](lab2_images/image-49.png)
-
- 4. **Skill flows** をクリックすると、作成したスキルフローが表示されます。  
-![alt text](lab2_images/image-50.png)  
+ 3. **Skill flows** をクリックすると、作成したスキルフローが表示されます。  
+![alt text](lab2_images/スクリーンショット_28-5-2024_185541_dl.watson-orchestrate.ibm.com.jpeg) 
 **注釈:** 複数のスキルが表示される場合は、ご自身の名前のスキルを選択してください。（必要に応じて検索機能を使ってください）
 
- 5. **Add skill** をクリックし、自身のスキルセットに追加します。**Added** と表示されたら、**Chat** 画面に移動します。
+ 4. **Add skill** をクリックし、自身のスキルセットに追加します。**Added** と表示されたら、**Chat** 画面に移動します。
 
- 6. スキルをテストするには、以下のいずれかを実行します。
+ 5. スキルをテストするには、以下のいずれかを実行します。
     1. スキルをクリックして実行します。
     ![alt text](lab2_images/image-51.png)
 
     2. スキルを Enhance する際に設定したフレーズの一部を入力します。例：**generate content**
-    ![alt text](lab2_images/image-52.png)  
+    ![alt text](lab2_images/スクリーンショット_28-5-2024_19225_dl.watson-orchestrate.ibm.com.jpeg)  
     表示された候補から、適切な文章を選択します。もし選択した文章と複数のスキルが合致していたら、watsonx Orchestrate はそれらのスキルを候補として提示します。
 
- 7. 最初はウェルカムメッセージを生成します。そのために、 **input** に適切な文章を入力します。
- ![alt text](lab2_images/image-53.png)
+ 6. 最初は新入社員を歓迎するメール文面を生成します。そのために、 **input** に適切な文章を入力します。(例: create welcome email to new hires)
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_19749_dl.watson-orchestrate.ibm.com.jpeg)
 
- 8. **Apply** ボタンをクリックすると、watsonx Orchetrate は生成された文章を次のスキルのコンテンツの欄にコピーします。宛先にご自身のメールアドレスを入力し、**Apply** ボタンをクリックします。
+ 7. **Apply** ボタンをクリックすると、watsonx Orchetrate は生成された文章を次のスキルの Content の欄にコピーします。宛先にご自身のメールアドレスを入力し、**Apply** ボタンをクリックします。
  ![alt text](lab2_images/image-54.png)
 
- 9. メールが送信されたというメッセージが表示されます。  
+ 8. メールが送信されたというメッセージが表示されます。  
  ![alt text](lab2_images/image-55.png)  
 
- 10. メールが送られているか、ご自身のメールボックスを確認してください。
+ 9. メールが送られているか、ご自身のメールボックスを確認してください。
 
 ## お疲れさまでした！
 以上で Lab2 は完了です。このラボでは、OpenAPI でスキルをインポートし、スキルを公開してテストを行いました。  
