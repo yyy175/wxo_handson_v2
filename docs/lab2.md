@@ -14,7 +14,7 @@
  1. watsonx Orchestrate にログインします。
  2. スキルを定義した [OpenAPI ファイル](./files/wxOハンズオン_BAM_Content_Generation.json)をダウンロードします。リンクを**右クリック**して**名前を付けてリンクを保存**を選択すると、ご自身の PC に保存できます。または、ブラウザ上で json ファイルを開いても構いません。
  3. お好みのエディター (VSCode、vi/vim など) を用いてファイルを編集します。
- 4. `YourName-generate content skill for wxO Handson` (8行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、`TaroYamada-generate content`)。同様に、`YourName-generate content` (26行目) も変更します。
+ 4. `YourName-IBM BAM` (4行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、`TaroYamada-IBM BAM`)。同様に、`YourName-generate content skill for wxO Handson` (8行目)、`YourName-generate content` (26行目) も変更します。
  5. ファイルを保存します。
  6. watsonx Orchestrateの画面で**Skills and apps**→**Add skills**を選択します。
  ![alt text](lab2_images/image-1.png)
@@ -22,11 +22,11 @@
  7. **From a file**タブを選択します。
  ![alt text](lab2_images/image-2.png)
 
- 8. 先ほど編集した`wxOハンズオン - BAM generate content.json`という名前のファイルをご自身のPCから指定の場所にドラッグアンドドロップします。アップロードされると、watsonx Orchestrateはjsonファイルをインポートする前に検証します。**Next**をクリックします。☆
- ![alt text](lab2_images/スクリーンショット_26-5-2024_16221_dl.watson-orchestrate.ibm.com-1.jpeg)
+ 8. 先ほど編集した`wxOハンズオン - BAM generate content.json`という名前のファイルをご自身のPCから指定の場所にドラッグアンドドロップします。アップロードされると、watsonx Orchestrateはjsonファイルをインポートする前に検証します。**Next**をクリックします。
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_1602_dl.watson-orchestrate.ibm.com.jpeg)
 
- 9. インポートするスキルのチェックボックスにチェックを入れ、**Add**をクリックします。☆
- ![alt text](lab2_images/image-60.png)
+ 9. インポートするスキルのチェックボックスにチェックを入れ、**Add**をクリックします。
+ ![alt text](lab2_images/image-68.png)
 
  10. スキルのインポートに成功すると、以下のように表示されます。  
  ![alt text](lab2_images/image-5.png)
@@ -35,24 +35,24 @@
  ![alt text](lab2_images/image-61.png)
 
  12. 複数のタブがある画面が表示されます。左端の**Name**タブはスキルの名前を表しています。 (先ほど、jsonファイルで変更した部分です)
- ![alt text](lab2_images/image-62.png)
+ ![alt text](lab2_images/image-69.png)
 
  13. **Input**タブをクリックします。required (必須) の欄とそうでない欄があることが確認できます。この画面は、インポートしたスキルを実行する際の入力項目を表しています。  
  必須になっている項目の **Edit response** をクリックし、テキストを入力してみましょう。例：`create welcome email to new hires`（スキルの実行時に例文として表示されます。）  
- ![alt text](lab2_images/image-8.png)
+ ![alt text](lab2_images/image-70.png)
 
  14. 他のタブも同様に動作を確認できます。
     - **Output**タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。
     - **Security**タブは、スキルを実行するために必要な認証情報を設定できます。
     - **Next Best Skill**タブは、このスキルが使用された後に、次に行うべきスキルとして watsonx Orchestrate が提案するスキルを設定できます。
  15. **Phrases**タブは、チャットからスキルを呼び出すためのフレーズを入力します。多くのフレーズを入力するほど、自然言語からスキルを判断する精度が向上します。
-![alt text](lab2_images/image-63.png)
+ ![alt text](lab2_images/image-71.png)
 
- 16. フレーズのテキスト欄に、`generate content`を入力し**Enter(return)** を押します。  
+ 16. フレーズの欄に、`generate content`を入力し**Enter(return)** を押します。  
  **注釈:** フレーズを入力するには**Enter(return)** を押さなければなりません。  
- `generate`,`content`などが含まれるフレーズを自由に追加することも可能です。
+ `generate`,`content`などが含まれるフレーズを自由に追加することも可能です。また、**Auto-generate phrases** をクリックすると、生成AIが自動でフレーズを生成してくれます。  
  最後に、**Publish**を押します。
- ![alt text](lab2_images/image-64.png)
+ ![alt text](lab2_images/image-72.png)
 
  17. スキルが公開（publish）できたというメッセージが表示されます。  
  ![alt text](lab2_images/image-65.png)
@@ -71,38 +71,37 @@
  ![alt text](lab2_images/image-13.png)
 
  3. 検索バーで、`generate content`を検索します。 **YourName-generate content skill for wxO Handson** という名前のアプリケーションを開き、先ほど作成した**YourName-generate content** というスキルを開きます。
- ![alt text](lab2_images/スクリーンショット_26-5-2024_172215_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_162835_dl.watson-orchestrate.ibm.com.jpeg)
 
  4. スキルを追加する前に、このスキルを接続するための API キーを指定し、スキルを使用するときに必要な出力を設定する必要があります。 この**API キー**は、[IBM Research BAM](https://bam.res.ibm.com/) にアクセスして、APIキーをコピーします。
  ![alt text](lab2_images/スクリーンショット_26-5-2024_161036_bam.res.ibm.com.jpeg)
 
  5. スキルカタログの画面に戻り、**Connect app** ボタンをクリックします。  
- ![alt text](lab2_images/スクリーンショット_26-5-2024_172546_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_163038_dl.watson-orchestrate.ibm.com.jpeg)
 
  6. コピーした**API キー**を貼り付け、APIキーの冒頭に **Bearer + 半角スペース** を追加します。**Connect app** ボタンをクリックします。 指定された**API キー**が有効な場合は、画面に正常な通知が表示されます。
- ![alt text](lab2_images/image-66.png)
+ ![alt text](lab2_images/image-73.png)
 
  7. 次に**Add skill** をクリックします。
- ![alt text](lab2_images/スクリーンショット_26-5-2024_172959_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_163731_dl.watson-orchestrate.ibm.com.jpeg)
 
  8. スキルが追加された (`Added`) というメッセージが表示されます。
- ![alt text](lab2_images/image-67.png)
+ ![alt text](lab2_images/image-74.png)
 
- 9. **Chat** 画面に戻ります。これで、スキルが表示されます。  
- ![alt text](lab2_images/スクリーンショット_26-5-2024_174444_dl.watson-orchestrate.ibm.com.jpeg)
+ 9. **Chat** 画面に戻ります。追加したスキルが表示されています。  
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_164033_dl.watson-orchestrate.ibm.com.jpeg)
 
  10. スキルをテストするには、該当のスキルをクリックします。 
 
- 11. 前のステップで説明したように、input は必須項目になっているため入力する必要があります。 
- 
- 12. input の欄に、`create welcome email to new hires`と入力します。**Show all fields** は、その他のパラメータを確認し、設定することができます。  
+ 11. 前のステップで説明したように、input は必須項目になっているため、必ず入力する必要があります。  
+ input の欄に、`create welcome email to new hires`と入力します。**Show all fields** は、その他のパラメータを確認し、設定することができます。  
  入力が完了したら、**Apply** をクリックします。  
-　![alt text](lab2_images/スクリーンショット_26-5-2024_182333_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_164826_dl.watson-orchestrate.ibm.com.jpeg)
 
- 13. スキルが実行されると、進行状況が表示され、`working on it` というメッセージが表示されます。 最後に、新入社員を歓迎するメールのコンテンツが生成されます。★
- ![alt text](lab2_images/image-21.png)
+ 12. スキルが実行されると、進行状況が表示され、`working on it` というメッセージが表示されます。 最後に、新入社員を歓迎するメールのコンテンツが生成されます。
+ ![alt text](lab2_images/image-75.png)
 
- 14. 以上で、メールのコンテンツを生成するテストは完了です。
+ 13. 以上で、メールのコンテンツを生成するテストは完了です。
 
 ## カタログからスキルを追加し、Outlookでメールを送ろう
 Outlook でメールを送信するスキルは、プリビルドスキルとして既に watsonx Orchestrate にインポートされています。  
@@ -118,8 +117,8 @@ Outlook に接続してメールを送信できるようにするには資格情
  3. **Microsoft Outlook** をクリックし、**Send an email using Outlook** の中で **Add skill** を選択します。 これで、このスキルは **Added** として表示されます。  
  ![alt text](lab2_images/image-24.png)
 
- 4. **Chat** 画面に移動すると (**Menu** -> **Chat**) 、このセクションで追加された 2 つのスキルが表示されます。☆
- ![alt text](lab2_images/image-25.png)
+ 4. **Chat** 画面に移動すると (**Menu** -> **Chat**) 、このセクションで追加された 2 つのスキルが表示されます。
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_17034_dl.watson-orchestrate.ibm.com.jpeg)
 
  5. これで、**Send emaill** スキルを追加するセクションは完了です。
 
@@ -157,53 +156,54 @@ Outlook に接続してメールを送信できるようにするには資格情
 
  1. **Menu** -> **Build** -> **Skills** に移動します。
 
- 2. **Add skills** のドロップダウンリスト (∨) から **Create an skill flow** を選択します。
- ![alt text](lab2_images/image-32.png)
+ 2. **Add skills** のドロップダウンリスト (∨) から **Create an skill flow** を選択します。  
+ ![alt text](lab2_images/image-32.png)  
 
- 3. **鉛筆** アイコンをクリックし、スキルフローに名前を付けます。例:`Generate content and send email - YourName`、**YourName** の部分は **TaroYamada** のようにすることをお勧めします。
+ 3. **鉛筆** アイコンをクリックし、スキルフローに名前を付けます。(例: Generate content and send email - YourName)  
+ **YourName** の部分は **TaroYamada** のようにすることをお勧めします。
  ![alt text](lab2_images/image-33.png)
 
- 4. 自身の名前を含めてフローの名前を付けたら、説明 (Description) を追加して保存します。
- ![alt text](lab2_images/image-34.png)
+ 4. 自身の名前を含めてフローの名前を付けたら、説明 (Description) を追加して保存します。(例: TaroYamada's generate content and send email)  
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_17854_dl.watson-orchestrate.ibm.com.jpeg)
 
- 5. スキルを追加するには、**+** をクリックします。**Generate content** を検索して、ご自身の **BAM generate content** を選択します。☆
- ![alt text](lab2_images/image-35.png)
+ 5. スキルを追加するには、**+** をクリックします。**Generate content** を検索して、ご自身の **YourName-generate content skill for wxO Handson** を選択します。
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_17160_dl.watson-orchestrate.ibm.com.jpeg)
 
- 6. インポートされたスキルが表示されます。**Add skill** を選択します。★
- ![alt text](lab2_images/image-36.png)
+ 6. インポートされたスキルが表示されます。**Add skill** を選択します。
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_171929_dl.watson-orchestrate.ibm.com.jpeg)
 
- 7. このスキルがフローに追加されます。★
- ![alt text](lab2_images/image-37.png)
+ 7. このスキルがフローに追加されます。
+ ![alt text](lab2_images/image-76.png)
 
- 8. 追加したスキルの後にある **+** をクリックします。 **Send email** を検索します。☆
- ![alt text](lab2_images/image-38.png)
+ 8. 追加したスキルの後にある **+** をクリックします。 **Send email** を検索します。
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_172315_dl.watson-orchestrate.ibm.com-1.jpeg)
 
  9. **Microsoft Outlook** をクリックすると、Outlook と連携して利用できるすべてのスキルが表示されます。 **Send an email** を探し **Add Skill** をクリックします。  
  ![alt text](lab2_images/image-39.png)
 
- 10. これで、スキルフローが作成されました。全体像は以下のようになります。☆
- ![alt text](lab2_images/image-40.png)
+ 10. これで、スキルフローが作成されました。全体像は以下のようになります。
+ ![alt text](lab2_images/image-77.png)
 
- 11. 生成されたコンテンツをメールで送信するために、1 つ目のスキルの出力を 2 つ目のスキルの入力にマップします。これを行うには、**YourName-generate content** をクリックします。☆
- ![alt text](lab2_images/image-41.png)
- Inputのパラメーターを確認してください。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。 ここでは **generated_text** の形式で出力されるものが 1 つだけあります。
+ 11. 生成されたコンテンツをメールで送信するために、1 つ目のスキルの出力を 2 つ目のスキルの入力にマップします。これを行うには、**YourName-generate content** をクリックします。
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_172827_dl.watson-orchestrate.ibm.com-1.jpeg)
+ Input のタブを開き、パラーメーターを確認します。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。次に、Output のタブを開きます。ここでは **text** の形式で出力されるものが 1 つだけあります。
 
  12. 次に、**Send an email** をクリックしてinput と Output のパラメーターを確認します。  
- ![alt text](lab2_images/image-42.png)
- **Input** タブをクリックしてください。**body.Content** の欄をクリックすると、**Available Mappings**の中に **YourName-generate text** スキルの出力が表示されます。**YourName-generate text"** をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、**generated_text** を選択します。☆
- ![alt text](lab2_images/image-43.png)  
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_174533_dl.watson-orchestrate.ibm.com.jpeg)
+ **Input** タブをクリックします。**body.Content** の欄をクリックすると、**Available Mappings**の中に **YourName-generate content** スキルの出力が表示されます。**YourName-generate content"** をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、**text** を選択します。☆
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_175139_dl.watson-orchestrate.ibm.com.jpeg)  
  **注意:** 必ず**ご自身の名前**が入ったスキルを選択してください。
 
- 13. 追加で制御できるオプションは他にもあります。例：エンドユーザーから見えないようにInput欄を非表示にする、など。
+ 13. 他にも、追加で制御できるオプションがあります。(例：エンドユーザーから見えないようにInput欄を非表示にする、など)
 
- 14. **Actions** -> **Save** をクリックして、スキルフローを保存します。 以下のように正常に保存されたことが表示されたら、**Close** をクリックして編集画面を閉じます。  
+ 14. **Actions** -> **Save as draft** (2回目以降は **Save**) をクリックして、スキルフローを保存します。 以下のように正常に保存されたことが表示されたら、**Close** をクリックして編集画面を閉じます。  
  ![alt text](lab2_images/image-44.png)
 
- 15. ご自身の名前を用いてスキルを検索します。（自身の名前をスキル名に追加する利点の1つです）
- ![alt text](lab2_images/image-45.png)
+ 15. ご自身の名前を用いてスキルを検索します。
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_183743_dl.watson-orchestrate.ibm.com.jpeg)
 
- 16. 次以降のステップのために、**Enhance this skill** を選択します。
- ![alt text](lab2_images/image-46.png)
+ 16. **Enhance this skill** を選択します。
+ ![alt text](lab2_images/スクリーンショット_28-5-2024_183955_dl.watson-orchestrate.ibm.com.jpeg)
 
  17. watsonx Orchestrate がスキルを認識できるように、スキルを呼び出すフレーズを登録してトレーニングする必要があります。  
  **Phrases** タブをクリックし、空の欄に **Generate content and send email to YourName** (**YourName** はご自身の名前に変更してください。例: TaroYamada) を入力し、Enter を押します。（**必ず Enter を押す必要があります**）  
