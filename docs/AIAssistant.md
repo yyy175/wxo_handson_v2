@@ -94,10 +94,10 @@ AI-Guilded Actionは特定のインテントにマッチした場合に、LLMに
 ## Skill based Actionの作成
 Skill based actionを用いることで、AI-Assistantからスキルを呼び出すことが可能です。今回はAutomation Builderで作成したスキルを呼び出すアクションを定義してみましょう。なお、アプリケーションの接続が必要なスキルは管理者による登録作業が必要です。  
 
-1. **create action**をクリックしてください。  
+1. **New action**をクリックしてください。  
 ![alt text](AIAssistant_images/image-20.png)
 
-2. Skill-basedアクションをクリックしてください。  
+2. Skill-based actionをクリックしてください。  
 ![alt text](AIAssistant_images/image-21.png)
 
 3. スキルの選択画面が表示されるので、Lab3で作成した**XXPersonalLoan**を選択し、右上の**Next**をクリックしてください。  
