@@ -89,7 +89,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 ![alt text](lab3_images/image-18.png)
 
 6. (オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。(デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。)   
-![alt text](lab3_images/image-19.png)
+![alt text](lab3_images/image-65.png)
 
 ## 意思決定のテスト
 作成した意思決定はテスト・データを指定してテストすることができます。
@@ -236,7 +236,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 3. 意思決定表を作成するため、**Decision table**を選択してください。  
 ![alt text](lab3_images/image-54.png)
 
-4. 今回は、収入(income)に応じた条件をテーブルとして定義してみましょう。そこで、nameとして"Income table"という名前を入力し、使用する条件として**income**を選択し、Createをクリックしてください。  
+4. 今回は、収入(income)に応じた条件をテーブルとして定義してみましょう。そこで、Nameとして"Income table"という名前を入力し、使用する条件として**income**を選択し、Createをクリックしてください。  
 ![alt text](lab3_images/image-55.png)
 
 5. 次のようなテーブルが表示されます。incomeのminとmaxがカラムとして入力可能になっており、それらの条件を満たす場合のDecisionの値をDecision列に記入することが可能です。  
@@ -248,17 +248,17 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 7. 条件列のルールは、変更することも可能です。income列のヘッダーを右クリックし、**Define column**を選択してください。以下のようなダイアログが表示されます。ここで、条件をルール・言語を用いて記述することが可能ですが、今回は修正を行わないため、**Cancel**をクリックして閉じてください。   
 ![alt text](lab3_images/image-58.png)
 
-8. アクション列のルールも確認してみましょう。アクション列のヘッダーにカーソルを合わせると、カラムに入力した値<a string>がDecisionにセットされるという事が分かります。アクション・ルールも先ほどと同様に右クリックして編集することも可能です。意思決定表は条件列がAND条件で評価され、trueの場合にアクション列に定義されたアクションが実行されます。各条件行は個別に評価されます。   
+8. アクション列のルールも確認してみましょう。アクション列のヘッダーにカーソルを合わせると、カラムに入力した値がdecisionにセットされるという事が分かります。アクション・ルールも先ほどと同様に右クリックして編集することも可能です。意思決定表は条件列がAND条件で評価され、trueの場合にアクション列に定義されたアクションが実行されます。各条件行は個別に評価されます。   
 ![alt text](lab3_images/image-59.png)
 
-9. 次に、incomeが0から10000の場合はdeclineとなるルールを追加してみましょう。1行目のminに**0**,maxに**10000**,Decisionに"declined"を入力してください。  
-![alt text](lab3_images/image-60.png)
+9. 次に、incomeが0から10000の場合はdeclinedとなるルールを追加してみましょう。1行目のminに**0**,maxに**10000**,Decisionに"declined"を入力してください。  
+![alt text](lab3_images/image-66.png)
 
 9. 次にincomeが10000以上の場合にはapproveとなるルールを追加してみましょう。maxに大きな値を入れることも可能ですが、表の記入形式を変更することも可能です。2行目を右クリックして、**change operator** > **≧**を選択してください。  
 ![alt text](lab3_images/image-61.png)
 
 10. 条件列に**10000**を、アクション列に**approved**を入力してください。  
-![alt text](lab3_images/image-63.png)
+![alt text](lab3_images/image-67.png)
 
-11. 作成したルールのテストをしてみましょう。画面右のプレビューアイコンをクリックしてテスト画面を開き、creditscoreが高く、employedがtrueであっても、incomeが10000以下の場合にローンが却下されることを確認してください。
-![alt text](lab3_images/image-64.png)
+11. 作成したルールのテストをしてみましょう。画面右のプレビューアイコンをクリックしてテスト画面を開き、creditScoreが高く、employedがtrueであっても、incomeが10000以下の場合にローンが却下されることを確認してください。
+![alt text](lab3_images/image-68.png)
