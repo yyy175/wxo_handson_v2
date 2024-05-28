@@ -165,8 +165,5 @@ Expected output:
 Context や prompt input を記入したり、変数を設定したりして、出力を生成しました。
 また、トークンや training example の調整を行うことで、出力の精度を向上させることができました。
 
-     シナリオ考える（メールなど）
-     日本語で動かして（llama-2）にして
-
 
  
