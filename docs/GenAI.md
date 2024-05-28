@@ -7,7 +7,7 @@ watsonx Orchestrate では、Lab2 で行ったように生成AIをカスタム�
  2. IBM-idを用いてログイン可能であること。
 
 ## Automation (生成AI) を作成してみよう
-Automation builder では、Lab3 と同様に Automation のアプリケーションを作成し、生成AI のプロンプトを作成できます。
+Automation builder では、まず Automation を作成し、そのコンポーネントの1つとして 生成AI のプロンプトを作成することができます。
 
  1. メニュー(≣)から **Automations** を選択します。  
  ![alt text](GenAI_images/スクリーンショット_27-5-2024_111327_dl.watson-orchestrate.ibm.com.jpeg)   
@@ -24,7 +24,7 @@ Automation builder では、Lab3 と同様に Automation のアプリケーシ�
  名前を **YourName-generate recommendation mail** と入力して、**Create** をクリックします。
  ![alt text](GenAI_images/image-5.png)
 
-こちらで、Automation と 生成AIのコンポーネント が作成されました。作成されると、プロンプト・エディターが開きます。
+こちらで、Automation と 生成AIのコンポーネント が作成されました。生成AIのコンポーネントが作成されると、プロンプト・エディターが開きます。
 ![alt text](GenAI_images/image-6.png)
 
 ## プロンプトを作成してみよう
@@ -34,13 +34,13 @@ Automation builder では、Lab3 と同様に Automation のアプリケーシ�
  ![alt text](<GenAI_images/スクリーンショット (94).png>)
 
  2. プロンプトを作成します。
-    1. **Context** にモデルへの命令文を入力します。今回は、顧客の特性に応じておすすめの観光地を紹介するメールを生成します。以下の文章を参考に入力します。 (一分ごとに改行してください) 
+    1. **Context** にモデルへの命令文を入力します。今回は、「顧客の特性に応じて、おすすめの観光地を紹介するメール」を生成するプロンプトを作成します。以下の文章を参考に入力します。 (一文ごとに改行してください)   
     ***あなたは、優秀な観光業のマーケターです。***  
     ***観光地のPRをするため、お客様に興味を持ってもらえるメールを送ろうとしています。***  
     ***お客様の特性に合わせて、おすすめの観光地を紹介するメールを日本語で作成してください。***
     ![alt text](GenAI_images/image-10.png)
 
-    2.  **Pronpt input** にモデルに応答してほしい文章を入力します。以下の文章を参考に入力します。  
+    2.  **Pronpt input** には、モデルに応答してほしい文章を入力します。以下の文章を参考に入力します。  
     ***お客様は、20代で、写真撮影が好きです。***
     ![alt text](GenAI_images/image-11.png)
 
@@ -49,15 +49,14 @@ Automation builder では、Lab3 と同様に Automation のアプリケーシ�
         1. **Variable** の欄で **New variable** をクリックします。
         ![alt text](GenAI_images/スクリーンショット_28-5-2024_112125_dl.watson-orchestrate.ibm.com.jpeg)
 
-        2. 変数に名前を付け、デフォルト値を入力します。 変数の名前と値は String (文字列) でなければなりません。今回は、以下の３つを作成します。（topic は既存の変数のデフォルト値のみ変更してください）
+        2. 変数に名前を付け、デフォルト値を入力します。 変数の名前と値は String (文字列) でなければなりません。今回は、以下の３つを作成します。(topic は既存の変数のデフォルト値のみ変更してください)
+         ![alt text](GenAI_images/image-9.png)
 
             |Variable|Default value|(意味)|(挿入先)|
             |:---:|:---:|--------|---|
-            |topic|観光地|おすすめしたいトピック|context|
-            |age|20|お客様の年代|prompt input|
-            |hobby|写真撮影|お客様の趣味|prompt input|
-
-         ![alt text](GenAI_images/image-9.png)
+            |topic|観光地|おすすめしたいトピック|Context|
+            |age|20|お客様の年代|Prompt input|
+            |hobby|写真撮影|お客様の趣味|Prompt input|
 
         3. 上の表に従って、**Prompt Input** または **Context** の欄で、プロンプトに変数を挿入します。（文字や数値で書いている部分を変数に置き換えます）
             1. 変数名は、二重の中かっこ {} で囲む必要があります。 (例: {{topic}})
@@ -82,14 +81,14 @@ Automation builder では、Lab3 と同様に Automation のアプリケーシ�
         ![alt text](GenAI_images/image-16.png)
 
  3. 右上の **×** をクリックしてオプションを閉じ、**Generate** をクリックします。
- 4. **Generated output** の欄で結果を確認します。
- **Raw prompt** のアイコン (![alt text](GenAI_images/image-3.png)) をクリックして、未加工のプロンプトを確認することもできます。
- ![alt text](GenAI_images/スクリーンショット_28-5-2024_121158_dl.watson-orchestrate.ibm.com.jpeg)
- **View raw prompt** が開き、生成された出力を取得するために使用された context や prompt input、training examples を確認できます。
- ![alt text](GenAI_images/image-13.png)
+ 4. **Generated output** の欄で結果を確認します。今回は、文章を最後まで生成できていることが確認できます。  
+ **Raw prompt** のアイコン (![alt text](GenAI_images/image-3.png)) をクリックして、未加工のプロンプトを確認することもできます。  
+ ![alt text](GenAI_images/スクリーンショット_28-5-2024_121158_dl.watson-orchestrate.ibm.com.jpeg)  
+ **View raw prompt** が開き、生成された出力を取得するために使用された context や prompt input、training examples を確認できます。  
+ ![alt text](GenAI_images/image-13.png)  
  5. 必要に応じて、より良い結果を得るためにプロンプトを調整します。
 
-## (オプション)トレーニング例 (Training examples) の追加
+## (オプション) Training examples の追加
  プロンプトが生成する出力の精度や品質、安定性を高めるため、プロンプトに例を追加することができます。
 
  入力と対応する出力のペアを1つ以上指定します。
@@ -119,24 +118,25 @@ Expected output:
 >伊勢名物「赤福」や、松阪牛、伊勢うどんなど、名産品にあふれた食べ歩きスポットです！  
 
 >弊社では、ご紹介した観光地をはじめとして、食べ歩きにおすすめの観光地を巡るツアーを多数ご用意しております！  
->弊社サイトでも、様々な観光地の魅力や訪問者の声などを掲載しておりますので、ぜひご参考になさってください。  
+>弊社サイトでも、様々な観光地の魅力や訪問者の声などを掲載しておりますので、ぜひ参考になさってください。  
 >この機会にぜひ、旅行を検討されてみてはいかがでしょうか？
 
- 3.** Generate** をクリックしてプロンプトをテストします。生成された出力の精度が向上しているか確認してください。
+ 3.** Generate** をクリックしてプロンプトをテストします。生成された出力の精度が向上しているか確認してみましょう。トレーニングサンプルに基づいた、よりマーケティングのメールらしい文章が生成されています。
+ ![alt text](GenAI_images/image-23.png)
 
- **ヒント:** 一般に、指定する入出力のペアが多いほど、結果は良くなります。ただし、例が多すぎる場合は、モデルで許可されている入力の最大トークンと入出力全体の最大トークンのスペースが減る可能性があります。
+ **ヒント:** 一般に、指定する入出力のペアが多いほど、結果は良くなります。ただし、例が多すぎる場合は、モデルで許可されている入力の最大トークンと入出力全体の最大トークンのスペースが減ってしまう可能性があります。
 
 ## 生成AIを公開してみよう
-生成AIのコンポーネントの作成が完了したら、operation を作成してこのコンポーネントを他のユーザーに公開します。それにより、彼らのAutomationの中で使ってもらったり、トレーニングしてもらったりすることが可能です。  
+生成AIのコンポーネントの作成が完了したら、operation を作成してこのコンポーネントを他のユーザーに公開できます。それにより、他のユーザーのAutomationの中で使ってもらったり、スキルをトレーニングしてもらったりすることが可能です。  
  1. **Operation** タブを開きます。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_124814_dl.watson-orchestrate.ibm.com.jpeg)  
  2. **Create operation** をクリックします。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_125053_dl.watson-orchestrate.ibm.com.jpeg)  
- 3. **Operation name** の欄に、**YourName_Reccomendation** (ハイフンやスペースは使えません) と入力し、**Component** の欄で公開したいコンポーネントを選択します。  
- ![alt text](GenAI_images/image-17.png)
+ 3. **Operation name** の欄に、**YourName_Recommendation** (ハイフンやスペースは使えません) と入力し、**Component** の欄で公開したいコンポーネントを選択します。  
+ ![alt text](GenAI_images/image-17.png)  
  4. **Save** をクリックします。  
- これで operation が作成されました。次に、このコンポーネントをスキルとして公開します。
- 5. **Share changes** をクリックします。
+ これで operation が作成されました。次に、このコンポーネントをスキルとして公開します。  
+ 5. **Share changes** をクリックします。  
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_125459_dl.watson-orchestrate.ibm.com.jpeg)
  6. **Share** をクリックします。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_14159_dl.watson-orchestrate.ibm.com.jpeg)
@@ -149,7 +149,7 @@ Expected output:
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_142856_dl.watson-orchestrate.ibm.com.jpeg)
  10. ポップアップが出てきたら、バージョンの名前の欄に **1.0.0** と入力して、**Create** をクリックします。
  ![alt text](GenAI_images/image-19.png)
- 11. 1.0.0 というバージョンが作成されたので、これをスキルとして公開します。**Publish** というタグをクリックします。
+ 11. 1.0.0 というバージョンが作成されたので、これをスキルとして公開します。**Publish** というタブをクリックします。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_143335_dl.watson-orchestrate.ibm.com.jpeg)
  12. 1.0.0 のバージョンをクリックすると、下に詳細が表示されます。**Publish** をクリックします。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_14364_dl.watson-orchestrate.ibm.com.jpeg)
@@ -157,13 +157,12 @@ Expected output:
  ![alt text](GenAI_images/image-20.png)
  13. 正常に公開されると、以下のように **Published** と表示されます。
  ![alt text](GenAI_images/image-21.png)
- 14. 左上のメニューから **Skills and apps** に戻ってみます。**Skills** のタブを選択すると、公開した生成AIのスキルが **Ready to Publish** の状態で表示されます。これまでのLabで行ったように、**Enhance this skill**をクリックして Enhance すると、スキルを利用できるようになります。
+ 14. 左上のメニュー (≣) から **Skills and apps** に戻ります。**Skills** のタブを選択すると、公開した生成AIのスキルが **Ready to Publish** の状態で表示されます。これまでのLabで行ったように、**Enhance this skill**をクリックして Enhance すると、スキルを利用できるようになります。
  ![alt text](GenAI_images/image-22.png)
 
 ## お疲れさまでした！
 このLabでは、Automation builder を用いて生成AIのプロンプトを作成しました。
 Context や Prompt input を記入したり、変数を設定したりして、出力を生成しました。
 また、トークンや Training examples の調整を行うことで、出力の精度を向上させることができました。
-
 
  
