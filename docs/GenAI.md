@@ -94,7 +94,7 @@ Automation builder では、Lab3 と同様に Automation のアプリケーシ�
 
  入力と対応する出力のペアを1つ以上指定します。
 
- 1. ページ下部にある **Training example** の欄で、**New example** をクリックします。
+ 1. ページ下部にある **Training examples** の欄で、**New example** をクリックします。
  ![alt text](GenAI_images/image-15.png)
  2. 入力と期待される出力を記入します。以下はトレーニングサンプルの例です。
   
@@ -162,8 +162,8 @@ Expected output:
 
 ## お疲れさまでした！
 このLabでは、Automation builder を用いて生成AIのプロンプトを作成しました。
-Context や prompt input を記入したり、変数を設定したりして、出力を生成しました。
-また、トークンや training example の調整を行うことで、出力の精度を向上させることができました。
+Context や Prompt input を記入したり、変数を設定したりして、出力を生成しました。
+また、トークンや Training examples の調整を行うことで、出力の精度を向上させることができました。
 
 
  
