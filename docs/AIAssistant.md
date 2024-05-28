@@ -49,7 +49,7 @@ AI AssistantではLLMを用いて回答を生成することが可能です。�
 
 
 ## AI-Guided Actionの作成
-AI-Guilded Actionは特定のインテントにマッチした場合に、LLMによって回答を生成する機能です。インテントごとに細かく生成AIの振る舞いや前提知識を指定することで、RAGと同様に根拠のある回答を行うことが可能です。
+AI-Guided Actionは特定のインテントにマッチした場合に、LLMによって回答を生成する機能です。インテントごとに細かく生成AIの振る舞いや前提知識を指定することで、RAGと同様に根拠のある回答を行うことが可能です。
 
 1. 左側のメニューより、**Actions**を選択してください。    
 ![alt text](AIAssistant_images/image-10.png)
@@ -76,7 +76,7 @@ AI-Guilded Actionは特定のインテントにマッチした場合に、LLMに
 ```
 ![alt text](AIAssistant_images/image-15.png)
 
-7. Add prompt instructionsの欄により詳細な指示を指定することが可能です。今回は日本語で回答することを明示的に指定するため、**日本語で簡潔に回答してください**と記入してください。  
+7. Add prompt instructionsの欄により詳細な指示を指定することが可能です。今回は日本語で回答することを明示的に指定するため、**日本語で簡潔に回答してください。**と記入してください。  
 ![alt text](AIAssistant_images/image-16.png)
 
 8. 右上のアイコンより変更を保存してください。  
@@ -106,7 +106,7 @@ Skill based actionを用いることで、AI-Assistantからスキルを呼び�
 4. Phraseとして**ローンの審査**と入力し右上の**create and review**をクリックしてください。なお、スキルを呼び出すためのフレーズは複数指定することで認識の精度が高まります。
 ![alt text](AIAssistant_images/image-24.png)
 
-5. 右下のチャット・プレビューに**ローンの審査**と記入し、送信してください。スキルが呼び出され入力フォームが表示されます。なお、watsonx Orchestrateでは設定でフォーム入力にするか、チャットで1つづつ入力パラメータを確認するかの設定が可能です。  
+5. 右下のチャット・プレビューに**ローンの審査**と記入し、送信してください。スキルが呼び出され入力フォームが表示されます。なお、watsonx Orchestrateでは設定でフォーム入力にするか、チャットで1つずつ入力パラメータを確認するかの設定が可能です。  
 ![alt text](AIAssistant_images/image-25.png)
 
 6. **Close**をクリックしてください。  
