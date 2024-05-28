@@ -24,7 +24,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 1. Automationsをクリックします。もしくは、左上のメニューから**Automations**を選択してもOKです。  
 ![alt text](lab3_images/image.png)
 
-5. 右上の**Create automations**をクリックします。
+5. 右上の**Create automation**をクリックします。
 ![alt text](lab3_images/image-1.png)
 
 6. Automationの作成ダイアログが表示されるので、**あなたのイニシャル_Lending_Services**という名前を入力し、**Create**をクリックしてください。
@@ -76,7 +76,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 1. 初めに作成するのは、デフォルト・ルールです。デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。その他のルールにはローンを却下する場合の条件を指定します。デフォルトのルールを作成するには、意思決定ノードを選択し、Logicタブをクリックしてから+ボタンをクリックし、Default ruleを選択します。  
 ![alt text](lab3_images/image-12.png)
 
-2. 次のような意思決定エディタが表示されるので、string placeholder(\<a string\>と表示されている場所)をクリックしてドロップダウンからstringを選択し、**approved**と入力してください。
+2. 次のような意思決定エディタが表示されるので、string placeholder(<a string\>と表示されている場所)をクリックしてドロップダウンからstringを選択し、**approved**と入力してください。
 ![alt text](lab3_images/image-15.png)
 
 3. ルールは以下の様になっているはずです。    
@@ -115,7 +115,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 3. **Create operation**ボタンをクリックしてください。  
 ![alt text](lab3_images/image-26.png)
 
-4. オペレーションの設定画面が表示されるので、Operation nameを**XXPersonalLoan**、source mComponentとして XX Personal Loanを選択してから**save**をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。  
+4. オペレーションの設定画面が表示されるので、Operation nameを**XXPersonalLoan**、Componentとして XX Personal Loanを選択してから**save**をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。  
 ![alt text](lab3_images/image-27.png)
 
 5. 次にページ右上にある**Share changes**タブをクリックします。  
@@ -174,7 +174,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 
 7. メモ帳やエディタなどで保存したファイルを開きます。各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については[Understanding x-properties](https://www.ibm.com/docs/en/watson-orchestrate?topic=skills-understanding-x-properties)を参照してください。
 
-8. **epmployed**は以下の様に設定されています。**,"default": "true"**となるようにファイルを編集してください。（カンマを含めることを忘れないでください） 
+8. **employed**は以下の様に設定されています。**,"default": "true"**となるようにファイルを編集してください。（カンマを含めることを忘れないでください） 
 ```
     "employed": {
                 "type": "boolean",
@@ -242,7 +242,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 5. 次のようなテーブルが表示されます。incomeのminとmaxがカラムとして入力可能になっており、それらの条件を満たす場合のDecisionの値をDecision列に記入することが可能です。  
 ![alt text](lab3_images/image-56.png)
 
-6. income列にカーソルを合わせると、次の様に、このカラムで定義されている条件分を確認することが可能です。  
+6. income列にカーソルを合わせると、次の様に、このカラムで定義されている条件文を確認することが可能です。  
 ![alt text](lab3_images/image-57.png)
 
 7. 条件列のルールは、変更することも可能です。income列のヘッダーを右クリックし、**Define column**を選択してください。以下のようなダイアログが表示されます。ここで、条件をルール・言語を用いて記述することが可能ですが、今回は修正を行わないため、**Cancel**をクリックして閉じてください。   
