@@ -5,8 +5,8 @@
 ## Day1 (5/29)
 |time|session|type||
 |-------|----|----|---|
-|13:00-13:45|watsonx Orchestrate概要|Lecture|watsonx Orchestrateの概要説明とデモを実施します。|
-|14:00-14:45|Lab1 Hello World|Lab|watsonx Orchestrateへのアクセス方法を確認し、最初のカスタム・スキルを構成します。|
+|13:00-13:45|製品概要|Lecture|watsonx Orchestrateの概要説明とデモを実施します。|
+|14:00-14:45|Lab1 Hello World|Lab|watsonx Orchestrateへのアクセス方法を確認し、カスタム・スキルを構成します。|
 |15:00-16:30|Lab2 skill flow|Lab|カスタム・スキルとプリビルド・スキルを組み合わせてスキルフローを作成します。|
 
 
