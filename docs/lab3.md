@@ -172,7 +172,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 6. スキル一覧画面に戻り、**Export this skill**を選択し、スキルをエクスポートし、ローカルにjsonファイルを保存します。  
 ![alt text](lab3_images/image-42.png)
 
-7. メモ帳やエディタなどで保存したファイルを開きます。各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については[Understanding x-properties](https://www.ibm.com/docs/en/watson-orchestrate?topic=skills-understanding-x-properties)を参照してください。
+7. メモ帳やエディタなどで保存したファイルを開きます。(実際のファイルは改行が含まれません、必要に応じてお使いのエディタでフォーマットしてください。)  各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については[Understanding x-properties](https://www.ibm.com/docs/en/watson-orchestrate?topic=skills-understanding-x-properties)を参照してください。
 
 8. **employed**は以下の様に設定されています。**,"default": "true"**となるようにファイルを編集してください。（カンマを含めることを忘れないでください） 
 ```
