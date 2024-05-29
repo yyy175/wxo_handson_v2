@@ -14,7 +14,7 @@
  1. watsonx Orchestrate にログインします。
  2. スキルを定義した [OpenAPI ファイル](./files/wxOハンズオン_BAM_generate_content.json)をダウンロードします。リンクを**右クリック**して**名前を付けてリンクを保存**を選択すると、ご自身の PC に保存できます。または、ブラウザ上で json ファイルを開いても構いません。
  3. お好みのエディター (VSCode、vi/vim など) を用いてファイルを編集します。
- 4. `YourName-IBM BAM` (4行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、`TaroYamada-IBM BAM`)。同様に、`YourName-generate content skill for wxO Handson` (8行目)、`YourName-generate content` (26行目) も変更します。
+ 4. `YourName-IBM BAM` (4行目) を探し、YourName をご自身の名前に変更します (例:山田太郎さんなら、`TaroYamada-IBM BAM`)。同様に、`YourName-generate content skill for wxO Handson` (8行目)、`YourName-generate content` (23行目) も変更します。
  5. ファイルを保存します。
  6. watsonx Orchestrateの画面で**Skills and apps**→**Add skills**を選択します。
  ![alt text](lab2_images/image-1.png)
