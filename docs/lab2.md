@@ -38,12 +38,12 @@
  ![alt text](lab2_images/image-69.png)
 
  13. **Input**タブをクリックします。required (必須) の欄とそうでない欄があることが確認できます。この画面は、インポートしたスキルを実行する際の入力項目を表しています。  
- 必須になっている項目の **Edit response** をクリックし、テキストを入力してみましょう。例：`create welcome email to new hires`（スキルの実行時に例文として表示されます。）  
- ![alt text](lab2_images/image-70.png)
+ 必須になっている項目の **Edit response** をクリックし、テキストを入力してみましょう。例：`新入社員を歓迎するメールを作成してください。`（スキルの実行時に例文として表示されます。）  
+ ![alt text](lab2_images/image-80.png)
 
  14. 他のタブも同様に動作を確認できます。
     - **Output**タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。
-    - **Security**タブは、スキルを実行するために必要な認証情報を設定できます。
+    - **Security**タブは、スキルを実行するために必要な認証情報を確認できます。
     - **Next Best Skill**タブは、このスキルが使用された後に、次に行うべきスキルとして watsonx Orchestrate が提案するスキルを設定できます。
  15. **Phrases**タブは、チャットからスキルを呼び出すためのフレーズを入力します。多くのフレーズを入力するほど、自然言語からスキルを判断する精度が向上します。
  ![alt text](lab2_images/image-71.png)
@@ -61,7 +61,7 @@
 
  19. **オプション:** 先ほど公開したスキルをカタログから探して、ステータスを確認してみましょう。ステータスはどのようになっているでしょうか？
 
-## 新入社員向けの歓迎メールを生成して、スキルをテストしてみよう
+## 新年度のご挨拶メールを生成して、スキルをテストしてみよう
 このセクションでは、インポートしたスキルをテストする方法について説明します。 スキルをテストするには、カタログからスキルを追加して実行する必要があります。 このための手順は、以下のとおりです。
 
  1. 左上にあるメニュー (≣) をクリックし、**チャット**を選択して、チャット画面に移動します。
@@ -79,7 +79,7 @@
  5. スキルカタログの画面に戻り、**Connect app** ボタンをクリックします。  
  ![alt text](lab2_images/スクリーンショット_28-5-2024_163038_dl.watson-orchestrate.ibm.com.jpeg)
 
- 6. コピーした**API キー**を貼り付け、APIキーの冒頭に **Bearer + 半角スペース** を追加します。**Connect app** ボタンをクリックします。 指定された**API キー**が有効な場合は、画面に正常な通知が表示されます。
+ 6. コピーした**API キー**を貼り付け、APIキーの冒頭に **Bearer + 半角スペース** を追加します。**Connect app** ボタンをクリックします。 指**API キー**が接続されると、**Connected** と表示されます。
  ![alt text](lab2_images/image-73.png)
 
  7. 次に**Add skill** をクリックします。
@@ -91,22 +91,23 @@
  9. **Chat** 画面に戻ります。追加したスキルが表示されています。  
  ![alt text](lab2_images/スクリーンショット_28-5-2024_164033_dl.watson-orchestrate.ibm.com.jpeg)
 
- 10. スキルをテストするには、該当のスキルをクリックします。 
+ 10. スキルをテストするには、先ほどフレーズとして登録した **generate content** をチャット欄に入力します。（該当のスキルをクリックしても実行できます）  
+ ![alt text](lab2_images/image-79.png)
 
  11. 前のステップで説明したように、input は必須項目になっているため、必ず入力する必要があります。  
- input の欄に、`create welcome email to new hires`と入力します。**Show all fields** は、その他のパラメータを確認し、設定することができます。  
+ input の欄に、`取引先のお客様に対する、新年度のご挨拶メールを作成してください。`と入力します。**Show all fields** は、その他のパラメータを確認し、設定することができます。  
  入力が完了したら、**Apply** をクリックします。  
- ![alt text](lab2_images/スクリーンショット_28-5-2024_164826_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](lab2_images/スクリーンショット_29-5-2024_121827_dl.watson-orchestrate.ibm.com.jpeg)
 
- 12. スキルが実行されると、進行状況が表示され、`working on it` というメッセージが表示されます。 最後に、新入社員を歓迎するメールのコンテンツが生成されます。
- ![alt text](lab2_images/image-75.png)
+ 12. スキルが実行されると、進行状況が表示され、`working on it` というメッセージが表示されます。 最後に、新年度のご挨拶メールのコンテンツが生成されます。  
+ ![alt text](lab2_images/image-81.png)  
 
  13. 以上で、メールのコンテンツを生成するテストは完了です。
 
 ## カタログからスキルを追加し、Outlookでメールを送ろう
 Outlook でメールを送信するスキルは、プリビルドスキルとして既に watsonx Orchestrate にインポートされています。  
 このスキルを追加し、Microsoft Outlook に接続してテストする必要があります。  
-Outlook に接続してメールを送信できるようにするには資格情報が必要になります。差出人として、自身のメールアドレスと資格情報を使用することはできません。
+Outlook に接続してメールを送信できるようにするには資格情報が必要になります。今回の環境では、差出人として、自身のメールアドレスと資格情報を使用することはできません。
 
  1. **Chat** に移動し **Add skills from the catalog** をクリックするか、左上のメニューに移動して **Skills catalog** を選択します。
  ![alt text](lab2_images/image-22.png)
@@ -133,7 +134,7 @@ Outlook に接続してメールを送信できるようにするには資格情
  3. リンク切れの (緑色のボックスで囲んだ)マークをクリックします。 スキルが Microsoft Outlook に接続されていないことが通知されます。 **Connect app** をクリックして Microsoft Outlook に接続します。 
  ![alt text](lab2_images/image-29.png)
 
- 4. **Type** はデフォルト値の **Non-admin user** を使用し、**Connect app** ボタンをクリックします。 これにより、Outlookに移動します。 講師から提供される資格情報を使用します。 (IBM のメールアドレスを使用して Outlook に接続することはできません)   
+ 4. **Type** はデフォルト値の **Non-admin user** を使用し、**Connect app** ボタンをクリックします。 これにより、Outlookに移動します。 講師から提供される資格情報を使用します。 (今回の環境では、IBM のメールアドレスを使用して Outlook に接続することはできません)   
  ![alt text](lab2_images/image-28.png)  
 
  5. **※パスワードは、ブラウザーやパスワード・マネージャーに保存しないようにご注意ください。**  
@@ -237,12 +238,14 @@ Outlook に接続してメールを送信できるようにするには資格情
     ![alt text](lab2_images/スクリーンショット_28-5-2024_19225_dl.watson-orchestrate.ibm.com.jpeg)  
     表示された候補から、適切な文章を選択します。もし選択した文章と複数のスキルが合致していたら、watsonx Orchestrate はそれらのスキルを候補として提示します。
 
- 6. 最初は新入社員を歓迎するメール文面を生成します。そのために、 **input** に適切な文章を入力します。(例: create welcome email to new hires)
- ![alt text](lab2_images/スクリーンショット_28-5-2024_19749_dl.watson-orchestrate.ibm.com.jpeg)
+ 6. 最初は新年度のご挨拶メール文面を生成します。そのために、 **input** に適切な文章を入力します。(例: 取引先のお客様に対する、新年度のご挨拶メールを作成してください。)
+ ![alt text](lab2_images/スクリーンショット_29-5-2024_122427_dl.watson-orchestrate.ibm.com.jpeg)
 
  7. **Apply** ボタンをクリックすると、watsonx Orchetrate は生成された文章を次のスキルの Content の欄にコピーします。宛先にご自身のメールアドレスを入力し、**Apply** ボタンをクリックします。
- ![alt text](lab2_images/image-54.png)
-
+ ![alt text](lab2_images/スクリーンショット_29-5-2024_12277_dl.watson-orchestrate.ibm.com.jpeg)  
+ ![alt text](lab2_images/スクリーンショット_29-5-2024_12295_dl.watson-orchestrate.ibm.com.jpeg)  
+ ![alt text](lab2_images/スクリーンショット_29-5-2024_122959_dl.watson-orchestrate.ibm.com.jpeg)  
+ 
  8. メールが送信されたというメッセージが表示されます。  
  ![alt text](lab2_images/image-55.png)  
 
