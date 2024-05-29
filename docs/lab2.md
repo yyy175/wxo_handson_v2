@@ -79,7 +79,7 @@
  5. スキルカタログの画面に戻り、**Connect app** ボタンをクリックします。  
  ![alt text](lab2_images/スクリーンショット_28-5-2024_163038_dl.watson-orchestrate.ibm.com.jpeg)
 
- 6. コピーした**API キー**を貼り付け、APIキーの冒頭に **Bearer + 半角スペース** を追加します。**Connect app** ボタンをクリックします。 指**API キー**が接続されると、**Connected** と表示されます。
+ 6. コピーした**API キー**を貼り付け、APIキーの冒頭に **Bearer + 半角スペース** を追加します。**Connect app** ボタンをクリックします。 完了すると、**Connected** と表示されます。(APIキーの入力が正しくない場合も Connected と表示されますのでご注意ください)
  ![alt text](lab2_images/image-73.png)
 
  7. 次に**Add skill** をクリックします。
