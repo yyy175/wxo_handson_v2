@@ -172,7 +172,7 @@ Outlook に接続してメールを送信できるようにするには資格情
  6. インポートされたスキルが表示されます。**Add skill** を選択します。
  ![alt text](lab2_images/スクリーンショット_28-5-2024_171929_dl.watson-orchestrate.ibm.com.jpeg)
 
- 7. このスキルがフローに追加されます。
+ 7. このスキルがフローに追加されます。  
  ![alt text](lab2_images/image-76.png)
 
  8. 追加したスキルの後にある **+** をクリックします。 **Send email** を検索します。
