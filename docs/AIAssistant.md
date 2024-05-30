@@ -47,6 +47,8 @@ AI AssistantではLLMを用いて回答を生成することが可能です。�
 5. 再びプレビューの入力欄に**What is IBM?**と入力してください。先ほどとは回答が異なることを確認します。  
 ![alt text](AIAssistant_images/image-9.png)
 
+6. いくつかのLLMを切り替え、General purpose answeringをONにした状態で様々な質問をして回答を確認してみてください。  
+
 
 ## AI-Guided Actionの作成
 AI-Guilded Actionは特定のインテントにマッチした場合に、LLMによって回答を生成する機能です。インテントごとに細かく生成AIの振る舞いや前提知識を指定することで、RAGと同様に根拠のある回答を行うことが可能です。
@@ -114,5 +116,6 @@ Skill based actionを用いることで、AI-Assistantからスキルを呼び�
 
 ## お疲れさまでした！
 AI Assistant Builderを用いてAIアシスタントを実装しました。AI Assistant Builderを用いることで、AI Assistantを迅速に実装することが可能です。また、作成したAI AssitantはWebサイトに埋め込んだり、Slackなどと連携することも可能です。　
+
 
 
