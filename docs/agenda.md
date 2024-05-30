@@ -15,5 +15,5 @@
 |-------|----|---|---|
 |13:00-13:30|OpenAPI Builder|Lab|OpenAPI BuilderでOpenAPIの仕様書を生成、編集、作成します。|
 |13:45-15:15|Lab3 Automation Builder|Lab|Automation Builderで意思決定サービスを実装します。|
-|15:30-16:15|GenAI|Lab|Automation Builderで生成AIのサービスを実装します。|
-|16:30-17:00|AI Assistant Builder|Lab|AI Assistant Builderを用いてAI Assistant Builderを実装します。|
+|15:05-15:50|GenAI|Lab|Automation Builderで生成AIのサービスを実装します。|
+|16:05-16:35|AI Assistant Builder|Lab|AI Assistant Builderを用いてAI Assistant Builderを実装します。|
