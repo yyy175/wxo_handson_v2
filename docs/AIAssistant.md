@@ -102,7 +102,7 @@ Skill based actionを用いることで、AI-Assistantからスキルを呼び�
 2. Skill-based actionをクリックしてください。  
 ![alt text](AIAssistant_images/image-21.png)
 
-3. スキルの選択画面が表示されるので、Lab3で作成した**XXPersonalLoan**を選択し、右上の**Next**をクリックしてください。  
+3. スキルの選択画面が表示されるので、Automation Builderのハンズオンで作成した**XXPersonalLoan**を選択し、右上の**Next**をクリックしてください。 （Automation Builderのハンズオンを実施していない場合は任意のスキルを選択してください） 
 ![alt text](AIAssistant_images/image-23.png)
 
 4. Phraseとして**ローンの審査**と入力し右上の**create and review**をクリックしてください。なお、スキルを呼び出すためのフレーズは複数指定することで認識の精度が高まります。
