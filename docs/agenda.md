@@ -2,7 +2,7 @@
 
 以下のwatsonx Orchestrateのハンズオン・セッションを実施します。
 
-## Day1
+## Agenda
 |time|session|type||
 |-------|----|----|---|
 |12:00-12:10|製品概要|Lecture|watsonx Orchestrateの概要説明とデモを実施します。|
