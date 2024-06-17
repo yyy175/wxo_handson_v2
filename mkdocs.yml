@@ -27,11 +27,12 @@ theme:
 nav:
 - Agenda: agenda.md
 - Hello world: lab1.md
+- GenAI: GenAI.md
 - Skill flow: lab2.md
 - Automation Builder: lab3.md
-- OpenAPI Builder: OpenAPI.md
-- GenAI: GenAI.md
 - AI Assistant: AIAssistant.md
+- (オプション)OpenAPI Builder: OpenAPI.md
+
 
 extra_css:
   - stylesheets/extra.css
