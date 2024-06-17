@@ -1,5 +1,5 @@
-# Automation builder (生成AI)
-watsonx Orchestrate では、Lab2 で行ったように生成AIをカスタムスキルとして外部から呼び出すことが可能ですが、Automation Builder では生成AIのプロンプトを作成し、スキルとして公開できます。
+# GenAI (Automation builder)
+watsonx Orchestrate では、生成AIをカスタムスキルとして外部から呼び出すことが可能ですが、Automation Builder では生成AIのプロンプトを作成し、スキルとして使用することができます。
 このLabでは、顧客の特性に応じてメールを生成するプロンプトを作成します。
 
 ## 前提条件
@@ -12,11 +12,14 @@ Automation builder では、まず Automation を作成し、そのコンポー�
  1. メニュー(≣)から **Automations** を選択します。  
  ![alt text](GenAI_images/スクリーンショット_27-5-2024_111327_dl.watson-orchestrate.ibm.com.jpeg)   
 
+
  2. **Create automation +** をクリックし、新規の Automation を作成します。
  ![alt text](GenAI_images/スクリーンショット_27-5-2024_114423_dl.watson-orchestrate.ibm.com.jpeg)
 
+
  3. Create automation のウィンドウで、名前の欄に **YourName_recommendation** と入力し、**Create** をクリックします。  
  ![alt text](GenAI_images/image-4.png)
+
 
  4. 生成AIを選択します。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_111233_dl.watson-orchestrate.ibm.com.jpeg)
@@ -157,8 +160,47 @@ Expected output:
  ![alt text](GenAI_images/image-20.png)
  13. 正常に公開されると、以下のように **Published** と表示されます。
  ![alt text](GenAI_images/image-21.png)
- 14. 左上のメニュー (≣) から **Skills and apps** に戻ります。**Skills** のタブを選択すると、公開した生成AIのスキルが **Ready to Publish** の状態で表示されます。これまでのLabで行ったように、**Enhance this skill**をクリックして Enhance すると、スキルを利用できるようになります。
- ![alt text](GenAI_images/image-22.png)
+ 14. 左上のメニュー (≣) から **Skills and apps** に戻ります。**Skills** のタブを選択する、あるいはSkills and appsのページで、作成したスキルを検索します (例:TaroYamada-Recommendation)。
+ 公開した生成AIのスキルが **Ready to Publish** の状態で表示されます。
+ スキルを公開するために、右端の ⁝ から**Enhance this skill**を選択します。
+ ![alt text](lab2_images/image-61.png)
+
+ 15. 複数のタブがある画面が表示されます。左端の**Name**タブはスキルの名前を表しています。 (先ほど、jsonファイルで変更した部分です)
+ ![alt text](<スクリーンショット 2024-06-17 223308.png>)
+
+ 13. **Input**タブをクリックします。この画面は、インポートしたスキルを実行する際の入力項目を表しています。  表示項目を日本語にしてみましょう。
+ 
+![alt text](<ASRecommnendation_inputスクリーンショット 2024-06-17 233250.png>)
+
+ 14. 他のタブも同様に動作を確認できます。
+    - **Output**タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。
+    - **Security**タブは、スキルを実行するために必要な認証情報を確認できます。
+    - **Next Best Skill**タブは、このスキルが使用された後に、次に行うべきスキルとして watsonx Orchestrate が提案するスキルを設定できます。
+ 15. **Phrases**タブは、チャットからスキルを呼び出すためのフレーズを入力します。多くのフレーズを入力するほど、自然言語からスキルを判断する精度が向上します。日本語で例文を追加します。
+
+ - `観光地のお勧め文を作成して`
+ - `おすすめ観光スポット`
+ - `お勧め観光地`
+ 
+ の3つを追加文を入力し**Enter(return)** を押します。  
+
+ > [!WARNING]
+>フレーズを入力するには**Enter(return)** を押さなければなりません。  
+
+ ![alt text](<スクリーンショット 2024-06-17 223354.png>)
+
+ 
+ フレーズを自由に追加することも可能です。また、**Auto-generate phrases** をクリックすると、生成AIが自動でフレーズを生成してくれます。  
+ 最後に、**Publish**を押します。
+ ![alt text](image-2.png)
+
+ 17. スキルが公開（publish）できたというメッセージが表示されます。  
+ ![alt text](lab2_images/image-65.png)
+
+ 18. スキルが正常に公開されました。
+
+ 19. **オプション:** 先ほど公開したスキルをカタログから探して、ステータスを確認してみましょう。ステータスはどのようになっているでしょうか？
+
 
 ## お疲れさまでした！
 このLabでは、Automation builder を用いて生成AIのプロンプトを作成しました。
