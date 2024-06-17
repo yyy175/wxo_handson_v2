@@ -72,32 +72,43 @@ Outlook に接続してメールを送信できるようにするには資格情
  4. 自身の名前を含めてフローの名前を付けたら、説明 (Description) を追加して保存します。(例: TaroYamada's generate content and send email)  
  ![alt text](lab2_images/スクリーンショット_28-5-2024_17854_dl.watson-orchestrate.ibm.com.jpeg)
 
- 5. スキルを追加するには、**+** をクリックします。**Generate content** を検索して、ご自身の **YourName-generate content skill for wxO Handson** を選択します。
- ![alt text](lab2_images/スクリーンショット_28-5-2024_17160_dl.watson-orchestrate.ibm.com.jpeg)
+ 5. スキルを追加するには、**+** をクリックします。**Generate content** を検索して、ご自身の **YourName-Recommendation** を選択します。
+ ![alt text](image-10.png)
 
  6. インポートされたスキルが表示されます。**Add skill** を選択します。
- ![alt text](lab2_images/スクリーンショット_28-5-2024_171929_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](image-11.png)
 
  7. このスキルがフローに追加されます。  
- ![alt text](lab2_images/image-76.png)
+ ![alt text](image-14.png)
 
  8. 追加したスキルの後にある **+** をクリックします。 **Send email** を検索します。
- ![alt text](lab2_images/スクリーンショット_28-5-2024_172315_dl.watson-orchestrate.ibm.com-1.jpeg)
+ ![alt text](image-12.png)
 
  9. **Microsoft Outlook** をクリックすると、Outlook と連携して利用できるすべてのスキルが表示されます。 **Send an email** を探し **Add Skill** をクリックします。  
  ![alt text](lab2_images/image-39.png)
 
  10. これで、スキルフローが作成されました。全体像は以下のようになります。
- ![alt text](lab2_images/image-77.png)
+![alt text](image-13.png)
 
- 11. 生成されたコンテンツをメールで送信するために、1 つ目のスキルの出力を 2 つ目のスキルの入力にマップします。これを行うには、**YourName-generate content** をクリックします。
- ![alt text](lab2_images/スクリーンショット_28-5-2024_172827_dl.watson-orchestrate.ibm.com-1.jpeg)
- Input のタブを開き、パラーメーターを確認します。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。次に、Output のタブを開きます。ここでは **text** の形式で出力されるものが 1 つだけあります。
+ 11. 生成されたコンテンツをメールで送信するために、1 つ目のスキルの出力を 2 つ目のスキルの入力にマップします。これを行うには、**YourName-Recommendation** をクリックします。
+ ![alt text](image-15.png)
+   Input のタブを開き、パラーメーターを確認します。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。
+   次に、Output のタブを開きます。ここでは **text** の形式で出力されるものが 1 つだけあります。
 
  12. 次に、**Send an email** をクリックしてinput と Output のパラメーターを確認します。  
- ![alt text](lab2_images/スクリーンショット_28-5-2024_174533_dl.watson-orchestrate.ibm.com.jpeg)
- **Input** タブをクリックします。**body.Content** の欄をクリックすると、**Available Mappings**の中に **YourName-generate content** スキルの出力が表示されます。**YourName-generate content"** をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、**text** を選択します。☆
- ![alt text](lab2_images/スクリーンショット_28-5-2024_175139_dl.watson-orchestrate.ibm.com.jpeg)  
+    - **パタ―ン１：自分でパラメーターの設定を行う**  
+   Input のタブを開き、パラーメーターを確認します。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。
+   ![alt text](<SkillFlow1スクリーンショット 2024-06-17 231439.png>)
+   ![alt text](<SkillFlow2スクリーンショット 2024-06-17 231617.png>)
+   ![alt text](<SkiiFlow3スクリーンショット 2024-06-17 231657.png>)
+   ![alt text](<SkillFlow4スクリーンショット 2024-06-17 231749.png>)
+    **Input** タブをクリックします。**body.Content** の欄をクリックすると、**Available Mappings**の中に **YourName-Recommendation** スキルの出力が表示されます。**YourName-Recommendation** をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、**generated_text** を選択します。
+
+    - **パタ―ン2：自動でマッピング機能を使用する**
+    `Generate mapping suggestions`をクリックすると、手動で設定したパラメーターと同じ`generated_text`が選択されます。
+    ![alt text](<SkillFlow_GenMapスクリーンショット 2024-06-17 231824.png>)
+
+
  **注意:** 必ず**ご自身の名前**が入ったスキルを選択してください。
 
  13. 他にも、追加で制御できるオプションがあります。(例：エンドユーザーから見えないようにInput欄を非表示にする、など)
