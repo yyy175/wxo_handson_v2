@@ -24,16 +24,16 @@ Automation builder では、まず Automation を作成し、そのコンポー�
  4. 生成AIを選択します。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_111233_dl.watson-orchestrate.ibm.com.jpeg)
 
- 名前を **YourName-generate recommendation mail** と入力して、**Create** をクリックします。
+ 5. 名前を **YourName-generate recommendation mail** と入力して、**Create** をクリックします。
  ![alt text](GenAI_images/image-5.png)
 
-こちらで、Automation と 生成AIのコンポーネント が作成されました。生成AIのコンポーネントが作成されると、プロンプト・エディターが開きます。
+6. こちらで、Automation と 生成AIのコンポーネント が作成されました。生成AIのコンポーネントが作成されると、プロンプト・エディターが開きます。
 ![alt text](GenAI_images/image-6.png)
 
 ## プロンプトを作成してみよう
 プロンプト・エディターを用いて、プロンプトを作成し、出力を生成することができます。
 
- 1.**Prompt** にある **Model:** のプルダウンメニューから、使いたいモデルを選択します。今回は、**mixtral-8x7b-instruct-v01** を選択します。
+ 1. **Prompt** にある **Model:** のプルダウンメニューから、使いたいモデルを選択します。今回は、**mixtral-8x7b-instruct-v01** を選択します。
  ![alt text](<GenAI_images/スクリーンショット (94).png>)
 
  2. プロンプトを作成します。
