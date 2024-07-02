@@ -196,13 +196,14 @@ paths:
 ![alt text](lab1_images/image-34.png)
 
 2. 先ほど追加したスキルが呼び出され、入力フォームが表示されます。  
-![alt text](image-38.png)
+![alt text](image-42.png)
 
 3. 自分の名前を入力し、**Apply**ボタンをクリックしてください。 
-![alt text](image-39.png) 
+![alt text](image-43.png)
 
-結果が表示されるはずです。
-![alt text](image-40.png)
+
+4. 結果が表示されるはずです。
+![alt text](image-45.png)
 
 4. チャットの内容は右上のホウキアイコンをクリックすることで削除することが可能です。  
 ![alt text](image-41.png)
