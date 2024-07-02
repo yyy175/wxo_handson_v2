@@ -9,26 +9,25 @@ watsonx Orchestrate では、生成AIをカスタムスキルとして外部か�
 ## Automation (生成AI) を作成してみよう
 Automation builder では、まず Automation を作成し、そのコンポーネントの1つとして 生成AI のプロンプトを作成することができます。
 
- 1. メニュー(≣)から **Automations** を選択します。  
- ![alt text](GenAI_images/スクリーンショット_27-5-2024_111327_dl.watson-orchestrate.ibm.com.jpeg)   
+ 1. メニュー(≣)から **Skill studio** を選択します。  
+![alt text](image-46.png) 
 
 
  2. **Create automation +** をクリックし、新規の Automation を作成します。
- ![alt text](GenAI_images/スクリーンショット_27-5-2024_114423_dl.watson-orchestrate.ibm.com.jpeg)
-
+ ![alt text](image-47.png)
 
  3. Create automation のウィンドウで、名前の欄に **YourName_recommendation** と入力し、**Create** をクリックします。  
- ![alt text](GenAI_images/image-4.png)
+ ![alt text](image-48.png)
 
 
  4. 生成AIを選択します。
- ![alt text](GenAI_images/スクリーンショット_28-5-2024_111233_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](image-49.png)
 
  5. 名前を **YourName-generate recommendation mail** と入力して、**Create** をクリックします。
- ![alt text](GenAI_images/image-5.png)
+![alt text](image-50.png)
 
 6. こちらで、Automation と 生成AIのコンポーネント が作成されました。生成AIのコンポーネントが作成されると、プロンプト・エディターが開きます。
-![alt text](GenAI_images/image-6.png)
+![alt text](image-51.png)
 
 ## プロンプトを作成してみよう
 プロンプト・エディターを用いて、プロンプトを作成し、出力を生成することができます。
@@ -80,13 +79,13 @@ Automation builder では、まず Automation を作成し、そのコンポー�
 
         右上の歯車(⚙)のマークをクリックし、再びオプションを表示します。
         ![alt text](GenAI_images/スクリーンショット_28-5-2024_113858_dl.watson-orchestrate.ibm.com.jpeg)
-        今回は、トークンの最大値 **Max generated tokens** を 500 に設定します。
-        ![alt text](GenAI_images/image-16.png)
+        今回は、トークンの最大値 **Max generated tokens** を 1000 に設定します。
+        ![alt text](image-52.png)
 
  3. 右上の **×** をクリックしてオプションを閉じ、**Generate** をクリックします。
  4. **Generated output** の欄で結果を確認します。今回は、文章を最後まで生成できていることが確認できます。  
  **Raw prompt** のアイコン (![alt text](GenAI_images/image-3.png)) をクリックして、未加工のプロンプトを確認することもできます。  
- ![alt text](GenAI_images/スクリーンショット_28-5-2024_121158_dl.watson-orchestrate.ibm.com.jpeg)  
+ ![alt text](image-53.png)  
  **View raw prompt** が開き、生成された出力を取得するために使用された context や prompt input、training examples を確認できます。  
  ![alt text](GenAI_images/image-13.png)  
  5. 必要に応じて、より良い結果を得るためにプロンプトを調整します。
@@ -125,7 +124,7 @@ Expected output:
 >この機会にぜひ、旅行を検討されてみてはいかがでしょうか？
 
  3.** Generate** をクリックしてプロンプトをテストします。生成された出力の精度が向上しているか確認してみましょう。トレーニングサンプルに基づいた、よりマーケティングのメールらしい文章が生成されています。
- ![alt text](GenAI_images/image-23.png)
+ ![alt text](image-54.png)
 
  **ヒント:** 一般に、指定する入出力のペアが多いほど、結果は良くなります。ただし、例が多すぎる場合は、モデルで許可されている入力の最大トークンと入出力全体の最大トークンのスペースが減ってしまう可能性があります。
 
@@ -136,41 +135,42 @@ Expected output:
  2. **Create operation** をクリックします。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_125053_dl.watson-orchestrate.ibm.com.jpeg)  
  3. **Operation name** の欄に、**YourName_Recommendation** (ハイフンやスペースは使えません) と入力し、**Component** の欄で公開したいコンポーネントを選択します。  
- ![alt text](GenAI_images/image-17.png)  
+ ![alt text](image-55.png) 
  4. **Save** をクリックします。  
  これで operation が作成されました。次に、このコンポーネントをスキルとして公開します。  
+ ![alt text](image-56.png)
  5. **Share changes** をクリックします。  
- ![alt text](GenAI_images/スクリーンショット_28-5-2024_125459_dl.watson-orchestrate.ibm.com.jpeg)
+![alt text](image-57.png)
  6. **Share** をクリックします。
- ![alt text](GenAI_images/スクリーンショット_28-5-2024_14159_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](image-58.png)
  ポップアップが出てきたら再度 **Share** をクリックします。
- ![alt text](GenAI_images/image-18.png)
- 7. シェアが完了したら、元のプロンプト・エディターの画面に戻ります。
+ ![alt text](image-59.png)
+ 7. シェアが完了したら、**Back to YourName_recommendation**をクリックし、元のプロンプト・エディターの画面に戻ります。
  8. 次に **History** のタブをクリックします。
- ![alt text](GenAI_images/スクリーンショット_28-5-2024_14632_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](image-63.png)
  9. 一番上の行の **Version +** をクリックします。
- ![alt text](GenAI_images/スクリーンショット_28-5-2024_142856_dl.watson-orchestrate.ibm.com.jpeg)
+![alt text](image-64.png)
  10. ポップアップが出てきたら、バージョンの名前の欄に **1.0.0** と入力して、**Create** をクリックします。
- ![alt text](GenAI_images/image-19.png)
+ ![alt text](image-65.png)
  11. 1.0.0 というバージョンが作成されたので、これをスキルとして公開します。**Publish** というタブをクリックします。
- ![alt text](GenAI_images/スクリーンショット_28-5-2024_143335_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](image-66.png)
  12. 1.0.0 のバージョンをクリックすると、下に詳細が表示されます。**Publish** をクリックします。
- ![alt text](GenAI_images/スクリーンショット_28-5-2024_14364_dl.watson-orchestrate.ibm.com.jpeg)
+ ![alt text](image-67.png)
  確認画面が出てくるので、もう一度 **Publish** をクリックします。
- ![alt text](GenAI_images/image-20.png)
+ ![alt text](image-68.png)
  13. 正常に公開されると、以下のように **Published** と表示されます。
- ![alt text](GenAI_images/image-21.png)
- 14. 左上のメニュー (≣) から **Skills and apps** に戻ります。**Skills** のタブを選択する、あるいはSkills and appsのページで、作成したスキルを検索します (例:TaroYamada-Recommendation)。
+ ![alt text](image-69.png)
+ 14. 左上のメニュー (≣) から**Skills studio**をクリックし、 **Skills and apps** タブをクリックし、戻ります。**Skills** のタブを選択する、あるいはSkills and appsのページで、作成したスキルを検索します (例:AyamiSato-Recommendation)。
  公開した生成AIのスキルが **Ready to Publish** の状態で表示されます。
  スキルを公開するために、右端の ⁝ から**Enhance this skill**を選択します。
- ![alt text](lab2_images/image-61.png)
+ !![alt text](image-71.png)
 
  15. 複数のタブがある画面が表示されます。左端の**Name**タブはスキルの名前を表しています。 
- ![alt text](<スクリーンショット 2024-06-17 223308.png>)
+![alt text](image-72.png)
 
  13. **Input**タブをクリックします。この画面は、インポートしたスキルを実行する際の入力項目を表しています。  表示項目を日本語にしてみましょう。
  
-![alt text](<ASRecommnendation_inputスクリーンショット 2024-06-17 233250.png>)
+![alt text](image-73.png)
 
  14. 他のタブも同様に動作を確認できます。
     - **Output**タブは、スキルの出力を設定できます。スキルの実行結果を表やテキストの形式で出力することができます。
@@ -187,12 +187,11 @@ Expected output:
  > [!WARNING]
 >フレーズを入力するには**Enter(return)** を押さなければなりません。  
 
- ![alt text](<スクリーンショット 2024-06-17 223354.png>)
-
+ ![alt text](image-74.png)
  
  フレーズを自由に追加することも可能です。また、**Auto-generate phrases** をクリックすると、生成AIが自動でフレーズを生成してくれます。  
  最後に、**Publish**を押します。
- ![alt text](image-2.png)
+![alt text](image-75.png)
 
  17. スキルが公開（publish）できたというメッセージが表示されます。  
  ![alt text](lab2_images/image-65.png)
@@ -206,39 +205,39 @@ Expected output:
 このセクションでは、作成したスキルをテストする方法について説明します。 スキルをテストするには、カタログからスキルを追加して実行する必要があります。 このための手順は、以下のとおりです。
 
  1. 左上にあるメニュー (≣) をクリックし、**チャット**を選択して、チャット画面に移動します。
- ![alt text](lab2_images/image-12.png)
+![alt text](image-76.png)
 
  2. **Add skills from the catalog** を選択し、前のステップで作成したスキルを選択します。  
  ![alt text](lab2_images/image-13.png)
 
  3. 検索バーで、`recommendation`を検索します。先ほど作成した**AS-Recommendation** というスキルを開きます。
- ![alt text](image-3.png)
+ ![alt text](image-77.png)
 
  4. スキルを追加するためには、**Add skill+**をクリックします。
- ![alt text](image-4.png)
+ ![alt text](image-78.png)
 
  8. スキルが追加された (`Added`) というメッセージが表示されます。
  ![alt text](image-5.png)
 
  9. **Chat** 画面に戻ります。追加したスキルが表示されています。  
-![alt text](image-6.png)
+![alt text](image-79.png)
 
  10. スキルをテストするには、先ほどフレーズとして登録した **おすすめ観光地** をチャット欄に入力します。（該当のスキルをクリックしても実行できます）  
  ![alt text](image-7.png)
 
  11. トピック の欄に`観光地`、年齢層の欄に`20`、趣味の欄に`写真撮影`を入力します。
  入力が完了したら、**Apply** をクリックします。  
- ![alt text](image-8.png)
+ ![alt text](image-80.png)
 
  12. スキルが実行されると、進行状況が表示され、`working on it` というメッセージが表示されます。 最後に、観光地のお勧めメールのコンテンツが生成されます。  
- ![alt text](image-9.png)
+ ![alt text](image-81.png)
 
  13. 以上で、メールのコンテンツを生成するテストは完了です。
 
 
 
 ## お疲れさまでした！
-このLabでは、Automation builder を用いて生成AIのプロンプトを作成しました。
+このLabでは、Automationを用いて生成AIのプロンプトを作成しました。
 Context や Prompt input を記入したり、変数を設定したりして、出力を生成しました。
 また、トークンや Training examples の調整を行うことで、出力の精度を向上させることができました。
 
