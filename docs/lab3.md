@@ -55,12 +55,11 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
     ![alt text](lab3_images/image-8.png)  
     ![alt text](image-89.png)
 
-3. 追加されたノードをクリックし、右側の編集欄から、Node nameを**income**に、Output typeを**Integer**にしてください。
-
- ![alt text](lab3_images/image-9.png)
- (左パレットでInputノードで追加した場合)
- incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、**Connect to another node**をクリックし、decision nodeに接続してください。(もしくは、DecisionノードのメニューからAdd Inputを選択した場合には自動的に接続されます)  
- ![alt text](lab3_images/image-10.png)  
+3. 追加されたノードをクリックし、右側の編集欄から、Node nameを**income**に、Output typeを**Integer**にしてください。 
+![alt text](lab3_images/image-9.png)
+(左パレットでInputノードで追加した場合)
+incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、**Connect to another node**をクリックし、decision nodeに接続してください。(もしくは、DecisionノードのメニューからAdd Inputを選択した場合には自動的に接続されます)  
+![alt text](lab3_images/image-10.png)  
 
 5. 1-4の手順を繰り返し、以下の表に従って新規ノードを追加してください。  
 
