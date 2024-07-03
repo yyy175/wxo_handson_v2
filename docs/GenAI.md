@@ -131,43 +131,45 @@ Expected output:
 ## 生成AIを公開してみよう
 生成AIのコンポーネントの作成が完了したら、operation を作成してこのコンポーネントを他のユーザーに公開できます。それにより、他のユーザーのAutomationの中で使ってもらったり、スキルをトレーニングしてもらったりすることが可能です。  
 
- 1. **Operation** タブを開きます。
+1. **Operation** タブを開きます。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_124814_dl.watson-orchestrate.ibm.com.jpeg)  
  
- 2. **Create operation** をクリックします。
+2. **Create operation** をクリックします。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_125053_dl.watson-orchestrate.ibm.com.jpeg)  
  
- 3. **Operation name** の欄に、**YourName_Recommendation** (ハイフンやスペースは使えません) と入力し、**Component** の欄で公開したいコンポーネントを選択します。  
-  ![alt text](image-55.png) 
+3. **Operation name** の欄に、**YourName_Recommendation** (ハイフンやスペースは使えません) と入力し、**Component** の欄で公開したいコンポーネントを選択します。  
+ ![alt text](image-55.png) 
 
- 4. **Save** をクリックします。これで operation が作成されました。次に、このコンポーネントをスキルとして公開します。
- ![alt text](image-56.png)
- 5. **Share changes** をクリックします。  
-  ![alt text](image-57.png)
+4. **Save** をクリックします。これで operation が作成されました。次に、このコンポーネントをスキルとして公開します。
+![alt text](image-56.png)
 
- 6. **Share** をクリックします。  
+5. **Share changes** をクリックします。  
+ ![alt text](image-57.png)
+
+6. **Share** をクリックします。  
  ![alt text](image-58.png)
 
  ポップアップが出てきたら再度 **Share** をクリックします。
  ![alt text](image-59.png)
 
- 7. シェアが完了したら、**Back to YourName_recommendation**をクリックし、元のプロンプト・エディターの画面に戻ります。
+7. シェアが完了したら、**Back to YourName_recommendation**をクリックし、元のプロンプト・エディターの画面に戻ります。
 
- 8. 次に **History** のタブをクリックします。
+8. 次に **History** のタブをクリックします。
  ![alt text](image-63.png)
 
- 9. 一番上の行の **Version +** をクリックします。
+9. 一番上の行の **Version +** をクリックします。
   ![alt text](image-64.png)
 
- 10. ポップアップが出てきたら、バージョンの名前の欄に **1.0.0** と入力して、**Create** をクリックします。
- ![alt text](image-65.png)
+10. ポップアップが出てきたら、バージョンの名前の欄に **1.0.0** と入力して、**Create** をクリックします。
+![alt text](image-65.png)
 
- 11. 1.0.0 というバージョンが作成されたので、これをスキルとして公開します。**Publish** というタブをクリックします。 
- ![alt text](image-66.png)
+11. 1.0.0 というバージョンが作成されたので、これをスキルとして公開します。**Publish** というタブをクリックします。 
+![alt text](image-66.png)
 
- 12. 1.0.0 のバージョンをクリックすると、下に詳細が表示されます。**Publish** をクリックします。![alt text](image-67.png)
+12. 1.0.0 のバージョンをクリックすると、下に詳細が表示されます。**Publish** をクリックします。![alt text](image-67.png)
 
- 確認画面が出てくるので、もう一度 **Publish** をクリックします。![alt text](image-68.png)
+ 確認画面が出てくるので、もう一度 **Publish** をクリックします。  
+ ![alt text](image-68.png)
 
  13. 正常に公開されると、以下のように **Published** と表示されます。![alt text](image-69.png)
 
