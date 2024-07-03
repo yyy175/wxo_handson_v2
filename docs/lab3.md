@@ -51,6 +51,7 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 2. Input Nodeの追加は2通りあります。
     - ①左側にあるパレットからAdd Input Nodeをクリックし、新規にInputノードを追加し、Decisionノードに接続する方法
     - ②Decisionノードにカーソルを持ってくると、decision nodeの上部にパレットが表示されるので、Inputノードをクリックし追加する方法
+    
     ![alt text](lab3_images/image-8.png)  
     ![alt text](image-89.png)
 
