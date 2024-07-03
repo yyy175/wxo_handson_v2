@@ -198,6 +198,7 @@ Expected output:
     ![alt text](image-75.png)
 
  19. スキルが公開（publish）できたというメッセージが表示されます。
+ 
  ![alt text](lab2_images/image-65.png)
  
  20. スキルが正常に公開されました。
