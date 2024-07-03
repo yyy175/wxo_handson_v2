@@ -108,19 +108,20 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 作成した意思決定はテスト・データを指定してテストすることができます。
 
  1. 右上の**Preview**アイコンをクリックしてください。  
- ![alt text](lab3_images/image-21.png)
+ ![alt text](image-91.png)
 
  2. **Add test data set**をクリックしてテスト・データを追加します。  
- ![alt text](lab3_images/image-22.png)
+ ![alt text](image-92.png)
 
- 3. 左側に各項目の入力画面が表示されるので、＋をクリックして入力してから**pewview**ボタンをクリックして意思決定の出力を確認してください。例えば、creditScoreに500を入力して実行した場合、却下されるはずです。  
-![alt text](lab3_images/image-23.png)
+ 3. 左側に各項目の入力画面が表示されるので、＋をクリックして入力してから**pewview**ボタンをクリックして意思決定の出力を確認してください。
+ 例えば、creditScoreに500を入力して実行した場合、却下されるはずです。  
+ ![alt text](image-93.png)
 
 ## 意思決定サービスのデプロイ
 正しく動作することが確認できたら、スキルとして呼び出せるようにサービスをデプロイします。  
 
 1. Back to "XX Personal Loan"をクリックしてください。  
-![alt text](lab3_images/image-24.png)
+![alt text](image-94.png)
 
 2. **Operations**タブをクリックしてください。スキルとして呼び出されるオペレーションを定義します。  
 ![alt text](lab3_images/image-25.png)
@@ -129,31 +130,35 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 ![alt text](lab3_images/image-26.png)
 
 4. オペレーションの設定画面が表示されるので、Operation nameを**XXPersonalLoan**、Componentとして XX Personal Loanを選択してから**save**をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。  
-![alt text](lab3_images/image-27.png)
+![alt text](image-95.png)
 
 5. 次にページ右上にある**Share changes**タブをクリックします。  
-![alt text](lab3_images/image-28.png)
+![alt text](image-96.png)
 
 6. **Share**ボタンをクリックしてください。ダイアログが表示されるので**Share**をクリックします。この操作により、リポジトリに変更が反映されます。  
-![alt text](lab3_images/image-29.png)
+![alt text](image-97.png)
+ポップアップが表示され、もう一度**Share**をクリックします。
+![alt text](image-98.png)
 
-7. 左上の←をクリックしてLending Serviceのレベルに戻り、**History**タブをクリックしてください。  
+7. 左上の**Back to XX_Lending_Srevices**をクリックしてLending Serviceのレベルに戻り、**History**タブをクリックしてください。  
 ![alt text](lab3_images/image-30.png)
 
 8. 右側の+アイコンをクリックし、バージョンを作成します。  
 ![alt text](lab3_images/image-31.png)
 
 9. バージョンの名前としてnameの欄に**1.0.0**と入力し、**Create**をクリックしてください。   　　
-![alt text](lab3_images/image-32.png)
+![alt text](image-99.png)
 
 10. バージョンが作成されたら、**Publish**タブをクリックし、作成されたバージョンを展開し、**Publish**をクリックしてください。ダイアログが表示されるので**Publish**をクリックします。  
-![alt text](lab3_images/image-33.png)
+![alt text](image-100.png)
+ポップアップが表示され、もう一度**Publish**をクリックします。
+![alt text](image-101.png)
 
 11. 意思決定サービスがパブリッシュされ、実行可能になりました。このサービスに紐づいたスキルがOrchestrate上に作成されます。左上のメニューから**Skills studio**を選択してから、**Skills**タブをクリックし、スキルの一覧を表示させます。  
-![alt text](lab3_images/image-34.png)
+![alt text](image-102.png)
 
 12. 作成した意思決定のスキルがReady to Publishの状態で表示されているはずです。
-![alt text](lab3_images/image-35.png)
+![alt text](image-103.png)
 
 ## スキルのエンハンス
 スキルのエンハンスを行い、各入力パラメータの表示形式や振る舞いを変更してみます。以下の様に変更します。変更はスキルのエンハンス画面から実施することが可能です。
@@ -169,15 +174,18 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 
 
 1. スキルの右側のメニューを展開し、**Enhance this skill**を選択します。  
-![alt text](lab3_images/image-36.png)
+![alt text](image-104.png)
 
 2. **Input**タブをクリックし、incomeの**Required**にチェックを入れてください。  
-![alt text](lab3_images/image-37.png)
+![alt text](image-105.png)
 
-3. loanPurposeの**Options**を選択し、**medical emergency**,**consolidate debt**,**home improvement**の3つのOptionを設定してください。  
-![alt text](lab3_images/image-39.png)
+3. loanPurposeの**Edit reponse**をクリックすると表示方法が３つ選べるようになります。ここでは、選択肢セットする表示方法にするために**Options**を選択します。Optionsの中にあるOption1に選択肢を3つ入力します。
+![alt text](image-106.png)
+**medical emergency**,**consolidate debt**,**home improvement**の3つのOptionを設定してください。  
+![alt text](image-107.png)
 
-4. creditScoreを選択し説明に**Provide the Experian credit score**を入力してください。  
+4. creditScoreを選択し、表示ラベルを設定します。デフォルトのままでは、creditScoreを表示されるところを、**Provide the Experian credit score**に変更します。
+そのためには、Provide the Label for input parameter creditScoreと書かれいてる箇所に**Provide the Experian credit score**を入力してください。  
 ![alt text](lab3_images/image-40.png)
 
 5. **Publish**をクリックして変更を保存します。
@@ -234,12 +242,15 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 16. 左側のメニューから**Skill catalog**を選択します。  
 ![alt text](lab3_images/image-48.png)
 
-17. **あなたのイニシャル_Lending_Service**検索欄に記入して検索し選択し、**Add**をクリックしてスキルを追加します。
-![alt text](lab3_images/image-49.png)  
-![alt text](lab3_images/image-50.png)
+17. **Lending**検索欄に記入して検索し選択し、**Add**をクリックしてスキルを追加します。
+![alt text](image-109.png)
+![alt text](image-108.png)
 
-18. 左側のメニューからChatを表示し、チャットの入力欄に、**あなたのイニシャルPersonalLoan**と入力してみてください。 スキルのフォームが表示され、先ほど行ったカスタマイズが正しく行われていることを確認します。 
-![alt text](lab3_images/image-52.png)
+18. 左側のメニューからChatを表示し、チャットの入力欄に、**あなたのイニシャルPersonalLoan**と入力してみてください。 スキルのフォームが表示され、先ほど行った表示が正しく行われていることを確認します。 必須項目として設定をした**income**のみが表示されます。試しに、**500**を入力しておきましょう。
+![alt text](image-110.png)
+**show all fields**をクリックすると、他の選択肢が表示されるようになります。
+選択肢を設定した**loanPurpose**や
+![alt text](image-111.png)
 
 19. 値を入力し、正しい結果が返ってくることを確認してください。
 
