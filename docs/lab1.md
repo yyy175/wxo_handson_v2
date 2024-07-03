@@ -1,4 +1,4 @@
-# Technical Lab1
+# Lab1 Hello world
 
 このLabでは、watsonx Orchestrateにログインし、カスタム・スキルを追加します。
 

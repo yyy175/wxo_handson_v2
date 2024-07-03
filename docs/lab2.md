@@ -1,4 +1,4 @@
-# Technical Lab2
+# Lab3 Skill flow
 
 このLabでは、GenAIで作成したコンテンツ生成のスキルと、Outlookでメールを送信するプリビルドスキルを組み合わせて、スキルフローを作成します。
 

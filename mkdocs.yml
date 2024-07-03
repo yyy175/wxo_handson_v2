@@ -26,11 +26,11 @@ theme:
     - toc.integrate
 nav:
 - Agenda: agenda.md
-- Hello world: lab1.md
-- GenAI: GenAI.md
-- Skill flow: lab2.md
-- Automation Builder: lab3.md
-- AI Assistant: AIAssistant.md
+- Lab1 Hello world: lab1.md
+- Lab2 GenAI: GenAI.md
+- Lab3 Skill flow: lab2.md
+- Lab4 Automation: lab3.md
+- Lab5 AI Assistant Builder: AIAssistant.md
 - (オプション)OpenAPI Builder: OpenAPI.md
 
 
