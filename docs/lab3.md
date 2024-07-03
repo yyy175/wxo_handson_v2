@@ -101,8 +101,7 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 ルールの名前を**decline unemployed**として、Select the criteria for your ruleで**employed**にチェックをしてから**create**をクリックしてください。
 (デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。)  
 ![alt text](image-90.png)
-ルールのテンプレートを以下の様に修正します。なお、Ctrl+Space(Macの場合はControl+Space)でコード補完が可能です。
-![alt text](lab3_images/image-65.png)
+ルールのテンプレートを以下の様に修正します。なお、Ctrl+Space(Macの場合はControl+Space)でコード補完が可能です。  ![alt text](lab3_images/image-65.png)
 
 ## 意思決定のテスト
 作成した意思決定はテスト・データを指定してテストすることができます。
@@ -188,7 +187,7 @@ incomeノード上にマウス・カーソルを動かすと、アイコンが�
 そのためには、Provide the Label for input parameter creditScoreと書かれいてる箇所に**Provide the Experian credit score**を入力してください。  
 ![alt text](lab3_images/image-40.png)
 
-5. **Publish**をクリックして変更を保存します。
+5. **Publish**をクリックして変更を保存します。  
 ![alt text](lab3_images/image-41.png)
 
 ## (オプション)openAPIで直接編集し、細かな変更を行う
