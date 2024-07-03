@@ -130,17 +130,21 @@ Expected output:
 
 ## 生成AIを公開してみよう
 生成AIのコンポーネントの作成が完了したら、operation を作成してこのコンポーネントを他のユーザーに公開できます。それにより、他のユーザーのAutomationの中で使ってもらったり、スキルをトレーニングしてもらったりすることが可能です。  
- 1. **Operation** タブを開きます。
+  1. **Operation** タブを開きます。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_124814_dl.watson-orchestrate.ibm.com.jpeg)  
- 2. **Create operation** をクリックします。
+  2. **Create operation** をクリックします。
  ![alt text](GenAI_images/スクリーンショット_28-5-2024_125053_dl.watson-orchestrate.ibm.com.jpeg)  
- 3. **Operation name** の欄に、**YourName_Recommendation** (ハイフンやスペースは使えません) と入力し、**Component** の欄で公開したいコンポーネントを選択します。![alt text](image-55.png)
- 4. **Save** をクリックします。  
- これで operation が作成されました。次に、このコンポーネントをスキルとして公開します。 ![alt text](image-56.png)
+  3. **Operation name** の欄に、**YourName_Recommendation** (ハイフンやスペースは使えません) と入力し、**Component** の欄で公開したいコンポーネントを選択します。  
+![alt text](image-55.png) 
 
- 5. **Share changes** をクリックします。![alt text](image-57.png)
+  4. **Save** をクリックします。  
+ これで operation が作成されました。次に、このコンポーネントをスキルとして公開します。  
+ ![alt text](image-56.png)
 
- 6. **Share** をクリックします。
+  5. **Share changes** をクリックします。  
+  ![alt text](image-57.png)
+
+  6. **Share** をクリックします。  
  ![alt text](image-58.png)
 
  ポップアップが出てきたら再度 **Share** をクリックします。
