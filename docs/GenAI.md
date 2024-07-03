@@ -189,13 +189,13 @@ Expected output:
     - `おすすめ観光スポット`
     - `お勧め観光地`
 
-   の3つを追加文を入力し**Enter(return)** を押します。 
+    の3つを追加文を入力し**Enter(return)** を押します。 
 
-   ![alt text](image-74.png)
-
-   フレーズを自由に追加することも可能です。また、**Auto-generate phrases** をクリックすると、生成AIが自動でフレーズを生成してくれます。  最後に、**Publish**を押します。
-
-   ![alt text](image-75.png)
+    ![alt text](image-74.png)
+    
+    フレーズを自由に追加することも可能です。また、**Auto-generate phrases** をクリックすると、生成AIが自動でフレーズを生成してくれます。  最後に、**Publish**を押します。
+    
+    ![alt text](image-75.png)
 
  19. スキルが公開（publish）できたというメッセージが表示されます。
  ![alt text](lab2_images/image-65.png)
