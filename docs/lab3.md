@@ -51,16 +51,16 @@ watsonx Orchestrateはルール・エンジン機能を提供するため、意�
 2. Input Nodeの追加は2通りあります。
     - ①左側にあるパレットからAdd Input Nodeをクリックし、新規にInputノードを追加し、Decisionノードに接続する方法
     - ②Decisionノードにカーソルを持ってくると、decision nodeの上部にパレットが表示されるので、Inputノードをクリックし追加する方法
-    
+
     ![alt text](lab3_images/image-8.png)  
     ![alt text](image-89.png)
 
 3. 追加されたノードをクリックし、右側の編集欄から、Node nameを**income**に、Output typeを**Integer**にしてください。
-![alt text](lab3_images/image-9.png)
 
-(左パレットでInputノードで追加した場合)
-incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、**Connect to another node**をクリックし、decision nodeに接続してください。(もしくは、DecisionノードのメニューからAdd Inputを選択した場合には自動的に接続されます)  
-![alt text](lab3_images/image-10.png)  
+ ![alt text](lab3_images/image-9.png)
+ (左パレットでInputノードで追加した場合)
+ incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、**Connect to another node**をクリックし、decision nodeに接続してください。(もしくは、DecisionノードのメニューからAdd Inputを選択した場合には自動的に接続されます)  
+ ![alt text](lab3_images/image-10.png)  
 
 5. 1-4の手順を繰り返し、以下の表に従って新規ノードを追加してください。  
 
