@@ -14,7 +14,6 @@
  1. watsonx Orchestrateにログインします。
  2. IBM-idを入力して、**Continue** ボタンをクリックします。
  3. 複数テナントに所属する場合には、テナント選択画面が表示されるので、適切なテナント名を選択してください。  
-    今回使用するテナントは**wxo-Workshop**です。
 
 ![alt text](lab1_images/image.png)
 
