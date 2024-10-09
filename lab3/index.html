@@ -1,0 +1,958 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../lab2/">
+      
+      
+        <link rel="next" href="../AIAssistant/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
+    
+    
+      
+        <title>Lab4 Automation - WXOHandson</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.06209087.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans+JP:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex Sans JP";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+   <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#lab4-automation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="WXOHandson" class="md-header__button md-logo" aria-label="WXOHandson" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            WXOHandson
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lab4 Automation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="WXOHandson" class="md-nav__button md-logo" aria-label="WXOHandson" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    WXOHandson
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agenda/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Agenda
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab1 Hello world
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../GenAI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab2 GenAI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab3 Skill flow
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Lab4 Automation
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lab4 Automation
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前提条件
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#watsonx-orchestrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      watsonx Orchestrateへのアクセス
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automationの作成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input ノードの実装
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      ルールの作成
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      意思決定のテスト
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      意思決定サービスのデプロイ
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      スキルのエンハンス
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openapi" class="md-nav__link">
+    <span class="md-ellipsis">
+      (オプション)openAPIで直接編集し、細かな変更を行う
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      作成したローン審査のスキルを使用してみよう！
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      お疲れさまでした！
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      さらに オプション 意思決定表の実装
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AIAssistant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lab5 AI Assistant Builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OpenAPI/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    (オプション)OpenAPI Builder
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="lab4-automation">Lab4 Automation</h1>
+<p>このLabでは、特定の基準に依存したアクションを実行する方法について学びます。<br />
+例えば、ローン申請者の収入やクレジット・スコアに応じてローンを承認したい場合にはルール・ベースでの意思決定を行うことが有用です。<br />
+watsonx Orchestrateはルール・エンジン機能を提供するため、意思決定を実装してスキルとして呼び出すことによりこの判断を行うことが可能です。</p>
+<h2 id="_1">前提条件</h2>
+<ol>
+<li>watsonx Orchestrateの環境にアクセスできること。<br />
+<a href="https://dl.watson-orchestrate.ibm.com/">https://dl.watson-orchestrate.ibm.com/</a> 　　 </li>
+<li>IBM-idを用いてログイン可能であること。</li>
+<li>Automationsを用いて自動化を作成する権限があること。(Builder権限)</li>
+</ol>
+<h2 id="watsonx-orchestrate">watsonx Orchestrateへのアクセス</h2>
+<ol>
+<li>watsonx Orchestrateにログインします。</li>
+<li>IBM-idを入力して、<strong>Continue</strong> ボタンをクリックします。</li>
+<li>複数テナントに所属する場合には、テナント選択画面が表示されるので、適切なテナント名を選択してください。<br />
+<a class="glightbox" href="../lab1_images/image.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab1_images/image.png" /></a></li>
+</ol>
+<h2 id="automation">Automationの作成</h2>
+<p>このセクションでは、Automationを作成します。</p>
+<ol>
+<li>
+<p>Skill studioをクリックします。もしくは、左上のメニューから<strong>Skill studio</strong>を選択してもOKです。<br />
+<a class="glightbox" href="../image-82.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-82.png" /></a></p>
+</li>
+<li>
+<p>右上にある<strong>Create skill</strong>をクリックし、<strong>Automation</strong>をクリックします。
+<a class="glightbox" href="../image-83.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-83.png" /></a></p>
+</li>
+<li>
+<p>Automationの新規作成のダイアログが表示されるので、<strong>あなたのイニシャル_Lending_Services</strong>という名前を入力し、<strong>Create</strong>をクリックしてください。
+<a class="glightbox" href="../image-84.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-84.png" /></a></p>
+</li>
+<li>
+<p>以下のようなダイアログが表示されます。意思決定、ワークフロー、生成AIに関する処理を実装することが可能です。今回は意思決定に関するスキルを実装するため、<strong>Decision</strong>をクリックします。  <br />
+<a class="glightbox" href="../image-85.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-85.png" /></a></p>
+</li>
+<li>
+<p>次にDecisionのモデルを選択します。3つのモデルを選択可能ですが、今回はDecision Modelを作成します。Decision ModelはDMN(Decision Model Notation)と呼ばれる標準の形式で意思決定をモデル化することが可能です。<br />
+<a class="glightbox" href="../image-86.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-86.png" /></a></p>
+</li>
+<li>
+<p>Decisionの名前を指定します。<strong>あなたのイニシャル Personal Loan</strong>という名前を指定して、<strong>Create</strong>ボタンをクリックしてください。<br />
+<a class="glightbox" href="../image-87.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-87.png" /></a></p>
+</li>
+<li>
+<p>次のようなDMN形式のダイアグラムが表示されます。緑のノード(Inputノード)はルールによって使用されるデータを表現します。  青いノード(意思決定ノード)は意思決定のステップを表現します。意思決定ノードにはそのステップで実行されるルールが含まれます。それぞれの意思決定ノードは部分的な意思決定の結果を出力します。複雑な意思決定には多くの意思決定ノードが含まれ、一つの意思決定ノードの出力が他の意思決定ノードの入力フローとして動作します。<br />
+<a class="glightbox" href="../image-88.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-88.png" /></a></p>
+</li>
+</ol>
+<h2 id="input">Input ノードの実装</h2>
+<p>このセクションでは、Inputノードの定義をしていきます。</p>
+<ol>
+<li>
+<p>Inputノードをクリックし、右側に表示される編集欄から、Node nameを<strong>applicant name</strong>に変更してください。<br />
+<a class="glightbox" href="../lab3_images/image-7.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-7.png" /></a></p>
+</li>
+<li>
+<p>Input Nodeの追加は2通りあります。</p>
+<ul>
+<li>①左側にあるパレットからAdd Input Nodeをクリックし、新規にInputノードを追加し、Decisionノードに接続する方法</li>
+<li>②Decisionノードにカーソルを持ってくると、decision nodeの上部にパレットが表示されるので、Inputノードをクリックし追加する方法</li>
+</ul>
+<p><a class="glightbox" href="../lab3_images/image-8.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-8.png" /></a><br />
+<a class="glightbox" href="../image-89.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-89.png" /></a></p>
+</li>
+<li>
+<p>追加されたノードをクリックし、右側の編集欄から、Node nameを<strong>income</strong>に、Output typeを<strong>Integer</strong>にしてください。 
+<a class="glightbox" href="../lab3_images/image-9.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-9.png" /></a>
+(左パレットでInputノードで追加した場合)
+incomeノード上にマウス・カーソルを動かすと、アイコンが表示されるので、<strong>Connect to another node</strong>をクリックし、decision nodeに接続してください。(もしくは、DecisionノードのメニューからAdd Inputを選択した場合には自動的に接続されます)<br />
+<a class="glightbox" href="../lab3_images/image-10.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-10.png" /></a>  </p>
+</li>
+<li>
+<p>1-4の手順を繰り返し、以下の表に従って新規ノードを追加してください。  </p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Node name</th>
+<th>Node type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>employed</td>
+<td>boolean</td>
+</tr>
+<tr>
+<td>SSN</td>
+<td>string</td>
+</tr>
+<tr>
+<td>loan purpose</td>
+<td>string</td>
+</tr>
+<tr>
+<td>credit score</td>
+<td>integer</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>意思決定ダイアグラムは以下の様になるはずです。<br />
+<a class="glightbox" href="../lab3_images/image-11.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-11.png" /></a>  </li>
+</ol>
+<h2 id="_2">ルールの作成</h2>
+<p>次に、意思決定ノードの中で実行されるルールをいくつか作成します。ルールは構文形式と意思決定表の形式で記述することが可能です。(日本語を用いることも可能ですが、現在のバージョンではサポートされていないため英語での記述になります。)</p>
+<ol>
+<li>
+<p>初めに作成するのは、<strong>デフォルト・ルール</strong>です。
+デフォルト・ルールは、承認の意思決定の結果を初期化するために用います。
+その他のルールには<strong>ローンを却下する場合の条件</strong>を指定します。
+デフォルトのルールを作成するには、Decisionノードを選択し、デフォルトではDetailsタブになっているため<strong>Logicタブ</strong>をクリックしてから右上に表示される＋ボタンをクリックし、一番下に表示されるDefault ruleを選択します。<br />
+<a class="glightbox" href="../lab3_images/image-12.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-12.png" /></a></p>
+</li>
+<li>
+<p>次のような意思決定エディタが表示されるので、string placeholder(&lt;a string&gt;と表示されている場所)をクリックしてドロップダウンからstringを選択し、<strong>approved</strong>と入力してください。
+<a class="glightbox" href="../lab3_images/image-15.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-15.png" /></a></p>
+</li>
+<li>
+<p>ルールは以下の様になっているはずです。  <br />
+<a class="glightbox" href="../lab3_images/image-14.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-14.png" /></a></p>
+</li>
+<li>
+<p>次に、<strong>クレジット・スコアが600以下の申請者の申請はすべて却下するルール</strong>を追加します。Default ruleを選択したときと同様に右上にある+ボタンをクリックして、<strong>Business Rule</strong>を選択します。
+ルールの名前を<strong>decline low credit score</strong>として、Select the criteria for your ruleでcredit scoreを選択してから<strong>create</strong>をクリックしてください。 <br />
+<a class="glightbox" href="../lab3_images/image-17.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-17.png" /></a></p>
+</li>
+<li>
+<p>ルールのテンプレートを以下の様に修正します。なお、Ctrl+Space(Macの場合はControl+Space)でコード補完が可能です。<br />
+<a class="glightbox" href="../lab3_images/image-18.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-18.png" /></a></p>
+</li>
+<li>
+<p>(オプション)例えば、無職の場合(employed is false)にローンを却下するなど、入力された値によってローンが却下されるようないくつかのルールを追加してみてください。
+手順は、右上にある+ボタンをクリックして、<strong>Business Rule</strong>を選択します。
+ルールの名前を<strong>decline unemployed</strong>として、Select the criteria for your ruleで<strong>employed</strong>にチェックをしてから<strong>create</strong>をクリックしてください。
+(デフォルトで、ローンの申請は承認され、ルールは却下する理由を判定することに注意してください。)<br />
+<a class="glightbox" href="../image-90.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-90.png" /></a>
+ルールのテンプレートを以下の様に修正します。なお、Ctrl+Space(Macの場合はControl+Space)でコード補完が可能です。  <a class="glightbox" href="../lab3_images/image-65.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-65.png" /></a></p>
+</li>
+</ol>
+<h2 id="_3">意思決定のテスト</h2>
+<p>作成した意思決定はテスト・データを指定してテストすることができます。</p>
+<ol>
+<li>
+<p>右上の<strong>Preview</strong>アイコンをクリックしてください。<br />
+<a class="glightbox" href="../image-91.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-91.png" /></a></p>
+</li>
+<li>
+<p><strong>Add test data set</strong>をクリックしてテスト・データを追加します。<br />
+<a class="glightbox" href="../image-92.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-92.png" /></a></p>
+</li>
+<li>
+<p>左側に各項目の入力画面が表示されるので、＋をクリックして入力してから<strong>pewview</strong>ボタンをクリックして意思決定の出力を確認してください。
+ 例えば、creditScoreに500を入力して実行した場合、却下されるはずです。<br />
+<a class="glightbox" href="../image-93.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-93.png" /></a></p>
+</li>
+</ol>
+<h2 id="_4">意思決定サービスのデプロイ</h2>
+<p>正しく動作することが確認できたら、スキルとして呼び出せるようにサービスをデプロイします。  </p>
+<ol>
+<li>
+<p>Back to "XX Personal Loan"をクリックしてください。<br />
+<a class="glightbox" href="../image-94.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-94.png" /></a></p>
+</li>
+<li>
+<p><strong>Operations</strong>タブをクリックしてください。スキルとして呼び出されるオペレーションを定義します。<br />
+<a class="glightbox" href="../lab3_images/image-25.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-25.png" /></a></p>
+</li>
+<li>
+<p><strong>Create operation</strong>ボタンをクリックしてください。<br />
+<a class="glightbox" href="../lab3_images/image-26.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-26.png" /></a></p>
+</li>
+<li>
+<p>オペレーションの設定画面が表示されるので、Operation nameを<strong>XXPersonalLoan</strong>、Componentとして XX Personal Loanを選択してから<strong>save</strong>をクリックしてください。この操作によってスキルとして呼び出されるオペレーションが作成されます。<br />
+<a class="glightbox" href="../image-95.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-95.png" /></a></p>
+</li>
+<li>
+<p>次にページ右上にある<strong>Share changes</strong>タブをクリックします。<br />
+<a class="glightbox" href="../image-96.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-96.png" /></a></p>
+</li>
+<li>
+<p><strong>Share</strong>ボタンをクリックしてください。ダイアログが表示されるので<strong>Share</strong>をクリックします。この操作により、リポジトリに変更が反映されます。<br />
+<a class="glightbox" href="../image-97.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-97.png" /></a>
+ポップアップが表示され、もう一度<strong>Share</strong>をクリックします。
+<a class="glightbox" href="../image-98.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-98.png" /></a></p>
+</li>
+<li>
+<p>左上の<strong>Back to XX_Lending_Srevices</strong>をクリックしてLending Serviceのレベルに戻り、<strong>History</strong>タブをクリックしてください。<br />
+<a class="glightbox" href="../lab3_images/image-30.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-30.png" /></a></p>
+</li>
+<li>
+<p>右側の+アイコンをクリックし、バージョンを作成します。<br />
+<a class="glightbox" href="../lab3_images/image-31.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-31.png" /></a></p>
+</li>
+<li>
+<p>バージョンの名前としてnameの欄に<strong>1.0.0</strong>と入力し、<strong>Create</strong>をクリックしてください。   　　
+<a class="glightbox" href="../image-99.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-99.png" /></a></p>
+</li>
+<li>
+<p>バージョンが作成されたら、<strong>Publish</strong>タブをクリックし、作成されたバージョンを展開し、<strong>Publish</strong>をクリックしてください。ダイアログが表示されるので<strong>Publish</strong>をクリックします。<br />
+<a class="glightbox" href="../image-100.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-100.png" /></a>
+ポップアップが表示され、もう一度<strong>Publish</strong>をクリックします。
+<a class="glightbox" href="../image-101.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-101.png" /></a></p>
+</li>
+<li>
+<p>意思決定サービスがパブリッシュされ、実行可能になりました。このサービスに紐づいたスキルがOrchestrate上に作成されます。左上のメニューから<strong>Skills studio</strong>を選択してから、<strong>Skills</strong>タブをクリックし、スキルの一覧を表示させます。<br />
+<a class="glightbox" href="../image-102.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-102.png" /></a></p>
+</li>
+<li>
+<p>作成した意思決定のスキルがReady to Publishの状態で表示されているはずです。
+<a class="glightbox" href="../image-103.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-103.png" /></a></p>
+</li>
+</ol>
+<h2 id="_5">スキルのエンハンス</h2>
+<p>スキルのエンハンスを行い、各入力パラメータの表示形式や振る舞いを変更してみます。以下の様に変更します。変更はスキルのエンハンス画面から実施することが可能です。
+また、オプションですが、スキルが定義されているOpenAPI定義を直接変更することでより細かい変更が可能です。 </p>
+<table>
+<thead>
+<tr>
+<th>入力パラメータ</th>
+<th>振る舞い</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>income</td>
+<td>必須</td>
+</tr>
+<tr>
+<td>loan purpose</td>
+<td>選択肢</td>
+</tr>
+<tr>
+<td>credit score</td>
+<td>説明を追加</td>
+</tr>
+<tr>
+<td>SSN</td>
+<td>非表示</td>
+</tr>
+<tr>
+<td>employed</td>
+<td>default value:true</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>
+<p>スキルの右側のメニューを展開し、<strong>Enhance this skill</strong>を選択します。<br />
+<a class="glightbox" href="../image-104.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-104.png" /></a></p>
+</li>
+<li>
+<p><strong>Input</strong>タブをクリックし、incomeの<strong>Required</strong>にチェックを入れてください。<br />
+<a class="glightbox" href="../image-105.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-105.png" /></a></p>
+</li>
+<li>
+<p>loanPurposeの<strong>Edit reponse</strong>をクリックすると表示方法が３つ選べるようになります。ここでは、選択肢セットする表示方法にするために<strong>Options</strong>を選択します。Optionsの中にあるOption1に選択肢を3つ入力します。
+<a class="glightbox" href="../image-106.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-106.png" /></a>
+<strong>medical emergency</strong>,<strong>consolidate debt</strong>,<strong>home improvement</strong>の3つのOptionを設定してください。<br />
+<a class="glightbox" href="../image-107.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-107.png" /></a></p>
+</li>
+<li>
+<p>creditScoreを選択し、表示ラベルを設定します。デフォルトのままでは、creditScoreを表示されるところを、<strong>Provide the Experian credit score</strong>に変更します。
+そのためには、Provide the Label for input parameter creditScoreと書かれいてる箇所に<strong>Provide the Experian credit score</strong>を入力してください。<br />
+<a class="glightbox" href="../lab3_images/image-40.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-40.png" /></a></p>
+</li>
+<li>
+<p><strong>Publish</strong>をクリックして変更を保存します。<br />
+<a class="glightbox" href="../lab3_images/image-41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-41.png" /></a></p>
+</li>
+</ol>
+<h2 id="openapi">(オプション)openAPIで直接編集し、細かな変更を行う</h2>
+<ol>
+<li>
+<p><strong>Save as draft</strong>をクリックして変更を保存します。<br />
+<a class="glightbox" href="../lab3_images/image-41.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-41.png" /></a></p>
+</li>
+<li>
+<p>スキル一覧画面に戻り、<strong>Export this skill</strong>を選択し、スキルをエクスポートし、ローカルにjsonファイルを保存します。<br />
+<a class="glightbox" href="../lab3_images/image-42.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-42.png" /></a></p>
+</li>
+<li>
+<p>メモ帳やエディタなどで保存したファイルを開きます。(実際のファイルは改行が含まれません、必要に応じてお使いのエディタでフォーマットしてください。)  各項目はx-ibmプロパティによって設定されます。x-ibmプロパティの詳細については<a href="https://www.ibm.com/docs/en/watson-orchestrate?topic=skills-understanding-x-properties">Understanding x-properties</a>を参照してください。</p>
+</li>
+<li>
+<p><strong>employed</strong>は以下の様に設定されています。<strong>,"default": "true"</strong>となるようにファイルを編集してください。（カンマを含めることを忘れないでください） 
+<div class="highlight"><pre><span></span><code>    &quot;employed&quot;: {
+                &quot;type&quot;: &quot;boolean&quot;,
+                &quot;x-ibm-order&quot;: 3,
+                &quot;x-ibm-multiline&quot;: &quot;false&quot;,
+                &quot;default&quot;: &quot;true&quot;
+                },
+</code></pre></div></p>
+</li>
+<li>
+<p>同様にSSNの部分を修正し、以下の様に <strong>,"x-ibm-show": "false"</strong>を追加してください。
+<div class="highlight"><pre><span></span><code>    &quot;SSN&quot;: {
+            &quot;type&quot;: &quot;string&quot;,
+            &quot;x-ibm-order&quot;: 4,
+            &quot;x-ibm-multiline&quot;: &quot;false&quot;,
+            &quot;x-ibm-show&quot;: &quot;false&quot;
+            },
+</code></pre></div></p>
+</li>
+<li>
+<p>ファイルを保存します。</p>
+</li>
+<li>
+<p>Skills and appsの画面で<strong>Add skills</strong>をクリックします。<br />
+<a class="glightbox" href="../lab3_images/image-43.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-43.png" /></a></p>
+</li>
+<li>
+<p><strong>From a file</strong>をクリックし、先ほど保存したファイルをドラッグ＆ドロップするか、クリックして選択してください。<br />
+<a class="glightbox" href="../lab3_images/image-44.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-44.png" /></a></p>
+</li>
+<li>
+<p>ファイルの検証が正しく行われたことを確認し<strong>Next</strong>をクリックします。エラーが表示された場合には、正しく編集されていることを確認してください。<br />
+<a class="glightbox" href="../lab3_images/image-45.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-45.png" /></a></p>
+</li>
+<li>
+<p>既に存在するスキルをインポートするため、警告が表示されますが、スキルのチェックボックスにチェックをいれ、<strong>Add</strong>をクリックしてスキルを上書きします。<br />
+<a class="glightbox" href="../lab3_images/image-46.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-46.png" /></a></p>
+</li>
+<li>
+<p>スキルの右側のメニューから<strong>Enhance this skill</strong>をクリックしてからスキルを<strong>Publish</strong>してください。<br />
+<a class="glightbox" href="../lab3_images/image-47.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-47.png" /></a></p>
+</li>
+</ol>
+<h2 id="_6">作成したローン審査のスキルを使用してみよう！</h2>
+<ol>
+<li>
+<p>左側のメニューから<strong>Skill catalog</strong>を選択します。<br />
+<a class="glightbox" href="../lab3_images/image-48.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-48.png" /></a></p>
+</li>
+<li>
+<p><strong>Lending</strong>検索欄に記入して検索し選択し、<strong>Add</strong>をクリックしてスキルを追加します。
+<a class="glightbox" href="../image-109.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-109.png" /></a>
+<a class="glightbox" href="../image-108.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-108.png" /></a></p>
+</li>
+<li>
+<p>左側のメニューからChatを表示し、チャットの入力欄に、<strong>あなたのイニシャルPersonalLoan</strong>と入力してみてください。 スキルのフォームが表示され、先ほど行った表示が正しく行われていることを確認します。 必須項目として設定をした<strong>income</strong>のみが表示されます。試しに、<strong>500</strong>を入力しておきましょう。
+<a class="glightbox" href="../image-110.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-110.png" /></a>
+<strong>show all fields</strong>をクリックすると、他の選択肢が表示されるようになります。
+選択肢を設定した<strong>loanPurpose</strong>や
+<a class="glightbox" href="../image-111.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../image-111.png" /></a></p>
+</li>
+<li>
+<p>値を入力し、正しい結果が返ってくることを確認してください。</p>
+</li>
+</ol>
+<h2 id="_7">お疲れさまでした！</h2>
+<p>このハンズオンでは、Automation Builderを用いて意思決定サービスを実装し、スキルの入力フォームをカスタマイズしてから、チャット画面から呼び出しました。意思決定サービスを用いることで、AIが苦手な根拠のある正確な判断を実行することができます。　</p>
+<h2 id="_8">さらに オプション　意思決定表の実装</h2>
+<p>ルールを記述する際には今回のハンズオンで実施したような構文形式のルールの他に、意思決定表による実装も可能です。意思決定表はIf-Thenの組み合わせを表形式で表現するため、多数の条件を表形式で管理したい場合などに有効です。また、エクセルの表などをコピー＆ペーストすることも可能なため、より業務ユーザーが管理しやすいというメリットもあります。このオプションでは、先ほど実装した意思決定に、意思決定表形式の新たなルールを追加します。</p>
+<ol>
+<li>
+<p>Automation Builderで編集するDecisionのDiagramを開きます。</p>
+</li>
+<li>
+<p>Diagram上で<strong>Decision</strong>をクリックし、右側のプロパティ画面より、Logicタブをクリックし、<strong>+</strong>アイコンをクリックしてください。<br />
+<a class="glightbox" href="../lab3_images/image-53.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-53.png" /></a></p>
+</li>
+<li>
+<p>意思決定表を作成するため、<strong>Decision table</strong>を選択してください。<br />
+<a class="glightbox" href="../lab3_images/image-54.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-54.png" /></a></p>
+</li>
+<li>
+<p>今回は、収入(income)に応じた条件をテーブルとして定義してみましょう。そこで、Nameとして"Income table"という名前を入力し、使用する条件として<strong>income</strong>を選択し、Createをクリックしてください。<br />
+<a class="glightbox" href="../lab3_images/image-55.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-55.png" /></a></p>
+</li>
+<li>
+<p>次のようなテーブルが表示されます。incomeのminとmaxがカラムとして入力可能になっており、それらの条件を満たす場合のDecisionの値をDecision列に記入することが可能です。<br />
+<a class="glightbox" href="../lab3_images/image-56.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-56.png" /></a></p>
+</li>
+<li>
+<p>income列にカーソルを合わせると、次の様に、このカラムで定義されている条件文を確認することが可能です。<br />
+<a class="glightbox" href="../lab3_images/image-57.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-57.png" /></a></p>
+</li>
+<li>
+<p>条件列のルールは、変更することも可能です。income列のヘッダーを右クリックし、<strong>Define column</strong>を選択してください。以下のようなダイアログが表示されます。ここで、条件をルール・言語を用いて記述することが可能ですが、今回は修正を行わないため、<strong>Cancel</strong>をクリックして閉じてください。 <br />
+<a class="glightbox" href="../lab3_images/image-58.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-58.png" /></a></p>
+</li>
+<li>
+<p>アクション列のルールも確認してみましょう。アクション列のヘッダーにカーソルを合わせると、カラムに入力した値がdecisionにセットされるという事が分かります。アクション・ルールも先ほどと同様に右クリックして編集することも可能です。意思決定表は条件列がAND条件で評価され、trueの場合にアクション列に定義されたアクションが実行されます。各条件行は個別に評価されます。 <br />
+<a class="glightbox" href="../lab3_images/image-59.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-59.png" /></a></p>
+</li>
+<li>
+<p>次に、incomeが0から10000の場合はdeclinedとなるルールを追加してみましょう。1行目のminに<strong>0</strong>,maxに<strong>10000</strong>,Decisionに"declined"を入力してください。<br />
+<a class="glightbox" href="../lab3_images/image-66.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-66.png" /></a></p>
+</li>
+<li>
+<p>次にincomeが10000以上の場合にはapproveとなるルールを追加してみましょう。maxに大きな値を入れることも可能ですが、表の記入形式を変更することも可能です。2行目を右クリックして、<strong>change operator</strong> &gt; <strong>≧</strong>を選択してください。<br />
+<a class="glightbox" href="../lab3_images/image-61.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-61.png" /></a></p>
+</li>
+<li>
+<p>条件列に<strong>10000</strong>を、アクション列に<strong>approved</strong>を入力してください。<br />
+<a class="glightbox" href="../lab3_images/image-67.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-67.png" /></a></p>
+</li>
+<li>
+<p>作成したルールのテストをしてみましょう。画面右のプレビューアイコンをクリックしてテスト画面を開き、creditScoreが高く、employedがtrueであっても、incomeが10000以下の場合にローンが却下されることを確認してください。
+<a class="glightbox" href="../lab3_images/image-68.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="alt text" src="../lab3_images/image-68.png" /></a></p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["tabs", "navigation.sections", "content.code.copy", "toc.integrate"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
+</html>
