@@ -68,7 +68,7 @@ watsonx Orchestrateには、プリビルド・スキルと呼ばれる1000以上
 openapi: 3.0.3
 info:
   title: YourInitials-helloworld-watsonx
-  description: Your Initials Hello world WatsonX
+  description: YourInitials Hello world WatsonX
   version: 1.0.0
   x-ibm-annotations: true
   x-ibm-application-name: IBM Watsonx - Training
@@ -85,7 +85,7 @@ paths:
       summary: YourInitials Hello World WatsonX
       operationId: Hello-YourInitials-watsonx
 ```
-4. 今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、x-ibm-application-id, title,summaryとoperationIdをユニークにする必要があります。これらの値のYourInitialsの部分をあなたのイニシャルに置き換えてファイルを保存してください。更新後のファイルは以下のようになるはずです。(イニシャルの置き換え箇所は、4か所あります。)
+4. 今回のハンズオンでは、複数の参加者が同一のファイルを読み込むため、ファイルの中の、title, x-ibm-application-id, description, summary, operationId をユニークにする必要があります。これらの値のYourInitialsの部分をあなたのイニシャルに置き換えてファイルを保存してください。更新後のファイルは以下のようになるはずです。(イニシャルの置き換え箇所は、5か所あります。)
 ```
 openapi: 3.0.3
 info:
@@ -105,7 +105,7 @@ paths:
   /hellowatsonx:
     post:
       summary: AS Hello World WatsonX
-      operationId: Hello-SH-watsonx
+      operationId: Hello-AS-watsonx
 ```
 
 5. メニューからSkill studio を選択します。  
