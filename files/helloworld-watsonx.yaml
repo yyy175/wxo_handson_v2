@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: YourInitials-helloworld-watsonx
-  description: Hello world WatsonX
+  description: YourInitials Hello world WatsonX
   version: 1.0.0
   x-ibm-annotations: true
   x-ibm-application-name: IBM Watsonx - Training
