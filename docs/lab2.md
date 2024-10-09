@@ -72,7 +72,7 @@ Outlook に接続してメールを送信できるようにするには資格情
  4. 自身の名前を含めてフローの名前を付けたら、説明 (Description) を追加して保存します。(例: TaroYamada's generate content and send email)  
  ![alt text](lab2_images/スクリーンショット_28-5-2024_17854_dl.watson-orchestrate.ibm.com.jpeg)
 
- 5. スキルを追加するには、**+** をクリックします。**Generate content** を検索して、ご自身の **YourName-Recommendation** を選択します。
+ 5. スキルを追加するには、**+** をクリックします。**Generate content** を検索して、**KI-Recommendation** を選択します。
  ![alt text](image-10.png)
 
  6. インポートされたスキルが表示されます。**Add skill** を選択します。
@@ -90,7 +90,7 @@ Outlook に接続してメールを送信できるようにするには資格情
  10. これで、スキルフローが作成されました。全体像は以下のようになります。
 ![alt text](image-13.png)
 
- 11. 生成されたコンテンツをメールで送信するために、1 つ目のスキルの出力を 2 つ目のスキルの入力にマップします。これを行うには、**YourName-Recommendation** をクリックします。
+ 11. 生成されたコンテンツをメールで送信するために、1 つ目のスキルの出力を 2 つ目のスキルの入力にマップします。これを行うには、**KI-Recommendation** をクリックします。
  ![alt text](image-15.png)
    Input のタブを開き、パラーメーターを確認します。 他のスキルの出力をこれらのパラメーターにマップすることも可能です。
    次に、Output のタブを開きます。ここでは **text** の形式で出力されるものが 1 つだけあります。
@@ -103,7 +103,7 @@ Outlook に接続してメールを送信できるようにするには資格情
    ![alt text](<SkiiFlow3スクリーンショット 2024-06-17 231657.png>)
    ![alt text](<SkillFlow4スクリーンショット 2024-06-17 231749.png>)
     
-    **Input** タブをクリックします。**body.Content** の欄をクリックすると、**Available Mappings**の中に **YourName-Recommendation** スキルの出力が表示されます。**YourName-Recommendation** をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、**generated_text** を選択します。
+    **Input** タブをクリックします。**body.Content** の欄をクリックすると、**Available Mappings**の中に **KI-Recommendation** スキルの出力が表示されます。**KI-Recommendation** をクリックすると、スキルの出力の一覧とコンテンツの型（text, numeric など）が表示されるので、**generated_text** を選択します。
 
     - **パタ―ン2：自動でマッピング機能を使用する**
 
